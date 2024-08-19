@@ -44,7 +44,7 @@ public class HotelSteps {
     @Then("verify user is on hotels displayed page")
     public void verify_user_is_on_hotels_displayed_page() {
 
-        Assert.assertTrue(hotelPage.hotelPageIsDisplayed());
+        Assert.assertTrue(hotelPage.hotelSearchPageIsDisplayed());
     }
 
 
@@ -84,4 +84,34 @@ public class HotelSteps {
         Assert.assertTrue(hotelPage.paymentPageIsDisplayed());
     }
 
+    @And("verify user is on hotels search page")
+    public void verifyUserIsOnHotelsSearchPage() {
+        Assert.assertTrue(hotelPage.hotelSearchPageIsDisplayed());
+
+    }
+
+    @And("user clicks on price low to high")
+    public void userClicksOnPriceLowToHigh() {
+        hotelPage.clickOnPriceLowToHigh();
+
+    }
+
+    @Then("verify the hotels displayed in price low to high order")
+    public void verifyTheHotelsDisplayedInPriceLowToHighOrder() {
+        Assert.assertTrue(hotelPage.priceIsLowToHighOrder());
+    }
+
+    @And("user clicks on price high to low")
+    public void userClicksOnPriceHighToLow() {
+        hotelPage.clickOnPriceHighToLow();
+
+    }
+
+
+
+    @Then("verify the hotels displayed in price high to low order")
+    public void verifyTheHotelsDisplayedInPriceHighToLowOrder() {
+        Assert.assertTrue(hotelPage.priceIsHighToLowOrder());
+    }
 }
+
