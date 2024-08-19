@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
@@ -107,7 +109,7 @@ public class HotelPage extends BasePage{
         @FindBy(xpath = "//span[text()='Hotel' and @class='HotelCardstyles__HotelTypeTag-sc-1s80tyk-17 gyCpqt']")
         WebElement hotelDisplayed;
 
-        public boolean hotelPageIsDisplayed() {
+        public boolean hotelSearchPageIsDisplayed() {
                 waitForElementToBeVisible(hotelDisplayed);
                 return hotelDisplayed.isDisplayed();
         }
@@ -279,5 +281,68 @@ public class HotelPage extends BasePage{
 
         public boolean paymentPageIsDisplayed(){
                return upiOptions.isDisplayed() && creditAndDebit.isDisplayed();
+        }
+
+        @FindBy(xpath = "//span[text()='Price (Low to High)']")
+        WebElement lowToHigh;
+
+        public void clickOnPriceLowToHigh() {
+                lowToHigh.click();
+        }
+
+        @FindBy(xpath = "//p[@itemprop='priceRange']")
+        List<WebElement> priceListLowToHigh;
+
+        public boolean priceIsLowToHighOrder() {
+                List<Integer> li = new ArrayList<>();
+
+                for (WebElement price : priceListLowToHigh) {
+                        li.add(Integer.valueOf(price.getText().trim()));
+                }
+
+
+                System.out.println("Original list (low to high) \n"+li);
+
+                List<Integer> copy_li = new ArrayList<>(li);
+                System.out.println("Copy of original list(low to high) \n "+copy_li);
+
+                Collections.sort(copy_li);
+                System.out.println("Sorted list (low to high) \n"+copy_li);
+
+                return li.equals(copy_li);
+        }
+
+
+        @FindBy(xpath = "//span[text()='Price (High to Low)']")
+        WebElement highToLow;
+
+        public void clickOnPriceHighToLow() {
+               highToLow.click();
+
+        }
+
+        @FindBy(xpath = "//p[@itemprop='priceRange']")
+        List<WebElement> priceListHighToLow;
+
+        public boolean priceIsHighToLowOrder() {
+                List<Double> li = new ArrayList<>();
+
+                for (WebElement price : priceListHighToLow) {
+                        li.add(Double.valueOf(price.getText().trim()));
+                }
+
+
+                System.out.println("Original list (high to low) \n"+li);
+
+                List<Double> copy_li = new ArrayList<>(li);
+                System.out.println("Copy of original list(high to low) \n "+copy_li);
+
+                Collections.sort(copy_li);
+                System.out.println("Sorted list (low to high) \n"+copy_li);
+
+                Collections.reverse(copy_li);
+                System.out.println("reverse sorter list (high to low)\n"+copy_li );
+
+                return li.equals(copy_li);
         }
 }
