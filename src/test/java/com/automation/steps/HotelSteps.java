@@ -113,5 +113,36 @@ public class HotelSteps {
     public void verifyTheHotelsDisplayedInPriceHighToLowOrder() {
         Assert.assertTrue(hotelPage.priceIsHighToLowOrder());
     }
+
+    @Then("verify international radio button is selected")
+    public void verifyInternationalRadioButtonIsSelected() {
+        Assert.assertTrue(hotelPage.internationalIsSelected());
+    }
+
+    @Then("verify India radio button is selected")
+    public void verifyIndiaRadioButtonIsSelected() {
+        Assert.assertTrue(hotelPage.indiaIsSelected());
+    }
+
+    @And("user clicks on customer rating")
+    public void userClicksOnCustomerRating() {
+        hotelPage.clickOnCustomerRating();
+    }
+
+    @Then("verify the hotels displayed in descending order by customer rating")
+    public void verifyTheHotelsDisplayedInDescendingOrderByCustomerRating() {
+        Assert.assertTrue(hotelPage.hotelsInDescendingOrderByCustomerRating());
+    }
+
+    @And("user clicks on Apartment")
+    public void userClicksOnApartment() throws InterruptedException {
+        hotelPage.clickOnApartment();
+
+    }
+
+    @Then("verify apartments are displayed in search page")
+    public void verifyApartmentsAreDisplayedInSearchPage() {
+        Assert.assertTrue(hotelPage.apartmentsAreDisplayed());
+    }
 }
 

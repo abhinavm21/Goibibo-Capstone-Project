@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0888e45a-3db5-4999-b32e-c0af04d91228" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/pages/HotelPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/pages/HotelPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/steps/HotelSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/steps/HotelSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/BookHotel.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/BookHotel.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,15 +39,19 @@
   "keyToString": {
     "Cucumber Java.Scenario: Book the first hotel.executor": "Run",
     "Cucumber Java.Scenario: Search hotel.executor": "Run",
+    "Cucumber Java.Scenario: Verify India is automatically selected by enter Indian city.executor": "Run",
+    "Cucumber Java.Scenario: Verify apartments is displayed on search page when we filter by apartment.executor": "Run",
+    "Cucumber Java.Scenario: Verify international radio button is automatically selected by enter international city.executor": "Run",
     "Cucumber Java.Scenario: Verify price of hotels are in high to low.executor": "Run",
     "Cucumber Java.Scenario: Verify price of hotels are in low to high.executor": "Run",
+    "Cucumber Java.Scenario: Verify rating of hotels are in descending order.executor": "Run",
     "Cucumber Java.Scenario: Verify that for one way trip from and to location should not be same (1).executor": "Run",
     "Cucumber Java.Scenario: Verify that for one way trip from and to location should not be same (2).executor": "Run",
     "Cucumber Java.Scenario: Verify that for one way trip from and to location should not be same.executor": "Run",
     "Cucumber Java.Scenario: user can search flight.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "hotel__price__sort",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/UST_java/MobileAutomation",
     "onboarding.tips.debug.path": "C:/UST_java/GoibiboCucumberAutomationProject/src/main/java/org/example/Main.java",
@@ -68,7 +72,7 @@
       <recent name="com.automation.steps" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Verify price of hotels are in high to low">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Verify apartments is displayed on search page when we filter by apartment">
     <configuration name="Scenario: Book the first hotel" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BookHotel.feature" />
@@ -89,15 +93,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Search hotel" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Verify India is automatically selected by enter Indian city" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BookHotel.feature" />
       <option name="GLUE" value="com.automation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="GoibiboCucumberAutomationProject" />
-      <option name="NAME_FILTER" value="^Search hotel$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Search hotel$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Search hotel" />
+      <option name="NAME_FILTER" value="^Verify India is automatically selected by enter Indian city$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify India is automatically selected by enter Indian city$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verify India is automatically selected by enter Indian city" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -109,15 +113,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Verify price of hotels are in high to low" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Verify apartments is displayed on search page when we filter by apartment" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BookHotel.feature" />
       <option name="GLUE" value="com.automation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="GoibiboCucumberAutomationProject" />
-      <option name="NAME_FILTER" value="^Verify price of hotels are in high to low$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify price of hotels are in high to low$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verify price of hotels are in high to low" />
+      <option name="NAME_FILTER" value="^Verify apartments is displayed on search page when we filter by apartment$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify apartments is displayed on search page when we filter by apartment$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verify apartments is displayed on search page when we filter by apartment" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -129,15 +133,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Verify price of hotels are in low to high" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Verify international radio button is automatically selected by enter international city" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BookHotel.feature" />
       <option name="GLUE" value="com.automation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="GoibiboCucumberAutomationProject" />
-      <option name="NAME_FILTER" value="^Verify price of hotels are in low to high$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify price of hotels are in low to high$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verify price of hotels are in low to high" />
+      <option name="NAME_FILTER" value="^Verify international radio button is automatically selected by enter international city$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify international radio button is automatically selected by enter international city$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verify international radio button is automatically selected by enter international city" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -149,15 +153,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Verify that for one way trip from and to location should not be same (2)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Verify rating of hotels are in descending order" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BookFlight.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BookHotel.feature" />
       <option name="GLUE" value="com.automation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="GoibiboCucumberAutomationProject" />
-      <option name="NAME_FILTER" value="^Verify that for one way trip from and to location should not be same$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify that for one way trip from and to location should not be same$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verify that for one way trip from and to location should not be same" />
+      <option name="NAME_FILTER" value="^Verify rating of hotels are in descending order$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify rating of hotels are in descending order$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verify rating of hotels are in descending order" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -171,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: Verify price of hotels are in high to low" />
-        <item itemvalue="Cucumber Java.Scenario: Verify price of hotels are in low to high" />
-        <item itemvalue="Cucumber Java.Scenario: Verify that for one way trip from and to location should not be same (2)" />
+        <item itemvalue="Cucumber Java.Scenario: Verify apartments is displayed on search page when we filter by apartment" />
+        <item itemvalue="Cucumber Java.Scenario: Verify rating of hotels are in descending order" />
         <item itemvalue="Cucumber Java.Scenario: Book the first hotel" />
-        <item itemvalue="Cucumber Java.Scenario: Search hotel" />
+        <item itemvalue="Cucumber Java.Scenario: Verify India is automatically selected by enter Indian city" />
+        <item itemvalue="Cucumber Java.Scenario: Verify international radio button is automatically selected by enter international city" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +192,20 @@
       <option name="presentableId" value="Default" />
       <updated>1723810108535</updated>
     </task>
+    <task id="LOCAL-00001" summary="hotel price scenario sorting added">
+      <option name="closed" value="true" />
+      <created>1724050645640</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1724050645640</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="hotel price scenario sorting added" />
+    <option name="LAST_COMMIT_MESSAGE" value="hotel price scenario sorting added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,15 +1,13 @@
 package com.automation.pages;
 
 import com.automation.utils.ConfigReader;
+import org.apache.poi.hpsf.Array;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class HotelPage extends BasePage{
 
@@ -344,5 +342,81 @@ public class HotelPage extends BasePage{
                 System.out.println("reverse sorter list (high to low)\n"+copy_li );
 
                 return li.equals(copy_li);
+        }
+
+        @FindBy(xpath = "(//input[@type='radio'])[2]")
+        WebElement internationalRadioBtn;
+
+        public boolean internationalIsSelected() {
+                return internationalRadioBtn.isSelected();
+        }
+
+        @FindBy(xpath = "(//input[@type='radio'])[1]")
+        WebElement indiaRadioBtn;
+
+        public boolean indiaIsSelected() {
+                return indiaRadioBtn.isSelected();
+        }
+
+        @FindBy(xpath = "//span[text()='Customer Ratings']")
+        WebElement customerRating;
+
+        public void clickOnCustomerRating() {
+
+                customerRating.click();
+        }
+
+        @FindBy(xpath = "//span[@itemprop='ratingValue']")
+        List<WebElement> customerRatingNum;
+
+        public boolean hotelsInDescendingOrderByCustomerRating() {
+                List<Double> li = new ArrayList<>();
+
+                for (WebElement rating : customerRatingNum) {
+                        String[] string = rating.getText().split("/");
+//                        System.out.println(Arrays.toString(string));
+                        li.add(Double.valueOf(string[0]));
+                }
+
+
+                System.out.println("Original list (high to low) \n"+li);
+
+                List<Double> copy_li = new ArrayList<>(li);
+                System.out.println("Copy of original list(high to low) \n "+copy_li);
+
+                Collections.sort(copy_li);
+                System.out.println("Sorted list (low to high) \n"+copy_li);
+
+                Collections.reverse(copy_li);
+                System.out.println("reverse sorted list (high to low)\n"+copy_li );
+
+                return li.equals(copy_li);
+        }
+
+        @FindBy(xpath = "//span[text()='Apartment']")
+        WebElement apartment;
+
+        public void clickOnApartment() throws InterruptedException {
+                apartment.click();
+                Thread.sleep(3000);
+
+        }
+
+        @FindBy(xpath = "//span[@class='HotelCardstyles__HotelTypeTag-sc-1s80tyk-17 gyCpqt' and text()='Apartment']")
+        List<WebElement> apartmentList;
+
+        public boolean apartmentsAreDisplayed() {
+
+                boolean flag=true;
+                for (WebElement apt : apartmentList) {
+                        if(!Objects.equals(apt.getText(), "APARTMENT")){
+                                System.out.println(apt.getText());
+                                flag=false;
+                                break;
+
+                        }
+                        System.out.println(apt.getText());
+                }
+                return flag;
         }
 }

@@ -42,4 +42,36 @@ Feature: Book Hotel
     And user clicks on price high to low
     Then verify the hotels displayed in price high to low order
 
+  Scenario:Verify rating of hotels are in descending order
+    Given user open goibibo website
+    When user select hotel booking
+    And user enters location "Chennai"
+    When user clicks on search
+    And verify user is on hotels search page
+    And user clicks on customer rating
+    Then verify the hotels displayed in descending order by customer rating
+
+
+  Scenario:Verify India is automatically selected by enter Indian city
+    Given user open goibibo website
+    When user select hotel booking
+    And user enters location "Mumbai"
+    Then verify India radio button is selected
+
+
+  Scenario:Verify International automatically selected by enter international city
+    Given user open goibibo website
+    When user select hotel booking
+    And user enters location "London"
+    Then verify international radio button is selected
+
+  Scenario:Verify apartments is displayed on search page when we filter by apartment
+    Given user open goibibo website
+    When user select hotel booking
+    And user enters location "Bangalore"
+    When user clicks on search
+    And verify user is on hotels search page
+    And user clicks on Apartment
+    Then verify apartments are displayed in search page
+
 
