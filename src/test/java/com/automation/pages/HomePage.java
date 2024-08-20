@@ -15,9 +15,9 @@ public class HomePage extends BasePage{
     WebElement popUp3;
 
 
-    public void openWebsite() throws InterruptedException {
+    public void openWebsite()  {
         driver.get("https://www.goibibo.com/");
-        Thread.sleep(1000);
+
 
         if(popUp1.isDisplayed()){
             popUp1.click();

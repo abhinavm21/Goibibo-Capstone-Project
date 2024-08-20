@@ -8,7 +8,7 @@ public class HomeSteps {
     HomePage homePage=new HomePage();
 
     @Given("user open goibibo website")
-    public void user_open_goibibo_website() throws InterruptedException {
+    public void user_open_goibibo_website() {
         homePage.openWebsite();
 
     }
