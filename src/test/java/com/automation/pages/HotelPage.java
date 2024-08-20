@@ -343,7 +343,6 @@ public class HotelPage extends BasePage {
         }
 
 
-
         @FindBy(xpath = "//span[text()='Customer Ratings']")
         WebElement customerRating;
 
@@ -392,7 +391,7 @@ public class HotelPage extends BasePage {
 
         public boolean PropertyPageAreDisplayed(String propType) {
 
-                String xpath="//span[@class='HotelCardstyles__HotelTypeTag-sc-1s80tyk-17 gyCpqt' and text()='%s']";
+                String xpath = "//span[@class='HotelCardstyles__HotelTypeTag-sc-1s80tyk-17 gyCpqt' and text()='%s']";
                 List<String> propList = driver.findElements(By.xpath(String.format(xpath, propType))).stream().map(WebElement::getText).toList();
                 boolean flag = true;
                 for (String apt : propList) {
@@ -416,23 +415,22 @@ public class HotelPage extends BasePage {
         }
 
         public boolean radioButtonIsSelected(String radioButton) {
-                String countryType="//h4[text()='%s']//..//input";
-                String loc = String.format(countryType,radioButton);
-                WebElement country=driver.findElement(By.xpath(loc));
+                String countryType = "//h4[text()='%s']//..//input";
+                String loc = String.format(countryType, radioButton);
+                WebElement country = driver.findElement(By.xpath(loc));
                 return country.isSelected();
-
 
 
         }
 
         public boolean filterOutputIsDisplayed(String output) {
-                String xpath="//span[text()='%s']";
+                String xpath = "//span[text()='%s']";
                 List<String> filterList = driver.findElements(By.xpath(String.format(xpath, output))).stream().map(WebElement::getText).toList();
                 boolean flag = true;
-                System.out.println(filterList);
+
                 for (String apt : filterList) {
                         if (!apt.contains(output)) {
-                                if(apt.isEmpty()){
+                                if (apt.isEmpty()) {
                                         continue;
                                 }
                                 System.out.println(apt);
@@ -443,6 +441,70 @@ public class HotelPage extends BasePage {
                 }
                 return flag;
         }
+
+        public boolean priceRangeIsDisplayedCorrectly(String priceRange) {
+
+                List<String> filterList = driver.findElements(By.xpath("//p[@itemprop='priceRange']")).stream().map(WebElement::getText).toList();
+
+                boolean flag = true;
+
+                if (priceRange.equals("Upto ₹1000")) {
+                        for (String p : filterList) {
+                                Integer price = Integer.parseInt(p);
+                                if (!(price <= 1000)) {
+                                        System.out.print(price);
+                                        flag = false;
+                                        break;
+                                }
+                                System.out.print(price);
+                        }
+
+                } else if (priceRange.equals("₹1001 - ₹2000")) {
+                        for (String p : filterList) {
+                                Integer price = Integer.parseInt(p);
+                                if (!(price>=1001 && price<= 2000)) {
+                                        System.out.print(price);
+                                        flag = false;
+                                        break;
+                                }
+                                System.out.print(price);
+
+                        }
+                } else if(priceRange.equals("₹2001 - ₹4000")) {
+                        for (String p : filterList) {
+                                Integer price = Integer.parseInt(p);
+                                if (!(price>=2001 && price<= 4000)) {
+                                        System.out.print(price);
+                                        flag = false;
+                                        break;
+                                }
+                                System.out.print(price);
+                        }
+                }else if (priceRange.equals("₹4001 - ₹6000")) {
+                        for (String p : filterList) {
+                                Integer price = Integer.parseInt(p);
+                                if (!(price>=4001 && price<= 6000)) {
+                                        System.out.print(price);
+                                        flag = false;
+                                        break;
+                                }
+                                System.out.print(price);
+                        }
+                } else if(priceRange.equals("₹6000 +")) {
+                        for (String p : filterList) {
+                                Integer price = Integer.parseInt(p);
+                                if (!(price>=6000)) {
+                                        System.out.print(price);
+                                        flag = false;
+                                        break;
+                                }
+                                System.out.print(price);
+                        }
+                }
+                return flag;
+
         }
+}
+
 
 

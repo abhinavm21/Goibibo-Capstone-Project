@@ -96,6 +96,21 @@ Feature: Book Hotel
       | All Meals Available           | INCL OF ALL MEALS                     |
 
 
+  Scenario Outline:Verify price filters are working properly
+    Given user open goibibo website
+    When user select hotel booking
+    And user enters location "Bangalore"
+    When user clicks on search
+    And verify user is on hotels search page
+    And user clicks on "<price_range>"
+    Then verify price filters "<price_range>" are displayed in search page
 
+    Examples:
+      | price_range   |
+      | Upto ₹1000    |
+      | ₹1001 - ₹2000 |
+      | ₹2001 - ₹4000 |
+      | ₹4001 - ₹6000 |
+      | ₹6000 +       |
 
 
