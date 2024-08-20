@@ -151,5 +151,10 @@ public class HotelSteps {
     public void verifyRespectedFiltersAreDisplayedInSearchPage(String output) {
         Assert.assertTrue(hotelPage.filterOutputIsDisplayed(output));
     }
+
+    @Then("verify price filters {string} are displayed in search page")
+    public void verifyPriceFiltersAreDisplayedInSearchPage(String priceRange) {
+        Assert.assertTrue(hotelPage.priceRangeIsDisplayedCorrectly(priceRange));
+    }
 }
 
