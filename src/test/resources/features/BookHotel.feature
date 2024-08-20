@@ -1,8 +1,8 @@
 Feature: Book Hotel
+
   Scenario: Search hotel
     Given user open goibibo website
     When user select hotel booking
-    And user select country Type
     And user enters location "Chennai"
     And user select checkIn date "30 September 2024"
     And checkOut date "16 October 2024"
@@ -10,18 +10,17 @@ Feature: Book Hotel
     Then user clicks on search
     And verify user is on hotels displayed page
 
-    Scenario: Book the first hotel
-      Given user open goibibo website
-      When user select hotel booking
-      And user enters location "Chennai"
-      When user clicks on search
-      And user clicks on first hotel displayed on the hotel search page
-      And user clicks on select room Button
-      And verify user is on property information page
-      And user fills the guest details
-      And user clicks on proceed to payment
-      Then verify user is on payment page
-
+  Scenario: Book the first hotel
+    Given user open goibibo website
+    When user select hotel booking
+    And user enters location "Chennai"
+    When user clicks on search
+    And user clicks on first hotel displayed on the hotel search page
+    And user clicks on select room Button
+    And verify user is on property information page
+    And user fills the guest details
+    And user clicks on proceed to payment
+    Then verify user is on payment page
 
 
   Scenario:Verify price of hotels are in low to high
@@ -52,26 +51,51 @@ Feature: Book Hotel
     Then verify the hotels displayed in descending order by customer rating
 
 
-  Scenario:Verify India is automatically selected by enter Indian city
+  Scenario Outline:Verify country type is automatically selected by enter city
     Given user open goibibo website
     When user select hotel booking
-    And user enters location "Mumbai"
-    Then verify India radio button is selected
+    And user enter location "<city>"
+    Then verify "<selected_country_Type>" is selected with respect to the city we entered
+    Examples:
+      | city   | selected_country_Type |
+      | Mumbai | India                 |
+      | London | International         |
 
 
-  Scenario:Verify International automatically selected by enter international city
-    Given user open goibibo website
-    When user select hotel booking
-    And user enters location "London"
-    Then verify international radio button is selected
-
-  Scenario:Verify apartments is displayed on search page when we filter by apartment
+  Scenario Outline:Verify property type are displayed on search page when we filter by property type
     Given user open goibibo website
     When user select hotel booking
     And user enters location "Bangalore"
     When user clicks on search
     And verify user is on hotels search page
-    And user clicks on Apartment
-    Then verify apartments are displayed in search page
+    And user clicks on "<property>"
+    Then verify "<property>" are displayed in search page
+
+    Examples:
+      | property  |
+      | Apartment |
+      | Villa     |
+      | Hotel     |
+
+  Scenario Outline:Verify popular filters are working properly
+    Given user open goibibo website
+    When user select hotel booking
+    And user enters location "Bangalore"
+    When user clicks on search
+    And verify user is on hotels search page
+    And user clicks on "<popular_filters>"
+    Then verify respected filters "<output>" are displayed in search page
+
+    Examples:
+      | popular_filters               | output                                |
+      | Couple-friendly Stays         | Couple Friendly                       |
+      | Free Cancellation Available   | Free Cancellation Till Checkin        |
+      | Free Breakfast Included       | INCL OF FREE BREAKFAST                |
+      | Breakfast Included            | INCL OF FREE BREAKFAST                |
+      | Breakfast and Dinner Included | INCL OF FREE BREAKFAST + LUNCH/DINNER |
+      | All Meals Available           | INCL OF ALL MEALS                     |
+
+
+
 
 

@@ -9,38 +9,38 @@ import org.junit.Assert;
 
 public class HotelSteps {
 
-    HotelPage hotelPage=new HotelPage();
+    HotelPage hotelPage = new HotelPage();
 
     @When("user select hotel booking")
     public void user_select_hotel_booking() {
         hotelPage.clickOnHotel();
     }
 
-    @When("user select country Type")
-    public void user_select_country_type() {
-        hotelPage.clickOnCountryType();
 
-    }
     @When("user enters location {string}")
     public void user_enters_location(String loc) throws InterruptedException {
         hotelPage.enterLocation(loc);
 
     }
+
     @And("user select checkIn date {string}")
     public void userSelectCheckInDate(String checkInDate) {
 
         hotelPage.selectCheckInDate(checkInDate);
     }
+
     @And("checkOut date {string}")
     public void checkoutDate(String checkOutDate) {
         hotelPage.selectCheckOutDate(checkOutDate);
 
     }
+
     @Then("user clicks on search")
     public void user_clicks_on_search() {
 
         hotelPage.clickOnSearch();
     }
+
     @Then("verify user is on hotels displayed page")
     public void verify_user_is_on_hotels_displayed_page() {
 
@@ -48,10 +48,9 @@ public class HotelSteps {
     }
 
 
-
     @And("select number of rooms {string},adults {string} ,child {string} and child age is {string}")
-    public void selectNumberOfRoomsAdultsChildAndChildAgeIs(String room,String adult, String child,String childAge) {
-        hotelPage.selectNumberOfGuestsAndNumberOfRooms(room,adult,child,childAge);
+    public void selectNumberOfRoomsAdultsChildAndChildAgeIs(String room, String adult, String child, String childAge) {
+        hotelPage.selectNumberOfGuestsAndNumberOfRooms(room, adult, child, childAge);
     }
 
     @And("user clicks on first hotel displayed on the hotel search page")
@@ -64,21 +63,25 @@ public class HotelSteps {
         hotelPage.clickOnSelectRoomBtn();
 
     }
+
     @And("verify user is on property information page")
     public void verify_user_is_on_property_information_page() {
         Assert.assertTrue(hotelPage.propertyInfoPageIsDisplayed());
 
     }
+
     @And("user fills the guest details")
     public void user_fills_the_guest_details() {
         hotelPage.fillDetails();
 
     }
+
     @And("user clicks on proceed to payment")
     public void user_clicks_on_proceed_to_payment() {
         hotelPage.proceedToPayment();
 
     }
+
     @Then("verify user is on payment page")
     public void verify_user_is_on_payment_page() {
         Assert.assertTrue(hotelPage.paymentPageIsDisplayed());
@@ -108,20 +111,9 @@ public class HotelSteps {
     }
 
 
-
     @Then("verify the hotels displayed in price high to low order")
     public void verifyTheHotelsDisplayedInPriceHighToLowOrder() {
         Assert.assertTrue(hotelPage.priceIsHighToLowOrder());
-    }
-
-    @Then("verify international radio button is selected")
-    public void verifyInternationalRadioButtonIsSelected() {
-        Assert.assertTrue(hotelPage.internationalIsSelected());
-    }
-
-    @Then("verify India radio button is selected")
-    public void verifyIndiaRadioButtonIsSelected() {
-        Assert.assertTrue(hotelPage.indiaIsSelected());
     }
 
     @And("user clicks on customer rating")
@@ -134,15 +126,30 @@ public class HotelSteps {
         Assert.assertTrue(hotelPage.hotelsInDescendingOrderByCustomerRating());
     }
 
-    @And("user clicks on Apartment")
-    public void userClicksOnApartment() throws InterruptedException {
-        hotelPage.clickOnApartment();
+    @And("user clicks on {string}")
+    public void userClicksOn(String propType) {
+        hotelPage.clickOnProperty(propType);
+    }
+
+    @Then("verify {string} are displayed in search page")
+    public void verifyAreDisplayedInSearchPage(String property) {
+        Assert.assertTrue(hotelPage.PropertyPageAreDisplayed(property));
+    }
+
+    @And("user enter location {string}")
+    public void userEnterLocation(String city) {
+        hotelPage.enterCountry(city);
 
     }
 
-    @Then("verify apartments are displayed in search page")
-    public void verifyApartmentsAreDisplayedInSearchPage() {
-        Assert.assertTrue(hotelPage.apartmentsAreDisplayed());
+    @Then("verify {string} is selected with respect to the city we entered")
+    public void verifyIsSelectedWithRespectToTheCityWeEntered(String radioBtn) {
+        Assert.assertTrue(hotelPage.radioButtonIsSelected(radioBtn));
+    }
+
+    @Then("verify respected filters {string} are displayed in search page")
+    public void verifyRespectedFiltersAreDisplayedInSearchPage(String output) {
+        Assert.assertTrue(hotelPage.filterOutputIsDisplayed(output));
     }
 }
 
