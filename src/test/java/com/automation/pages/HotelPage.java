@@ -3,7 +3,10 @@ package com.automation.pages;
 import com.automation.utils.ConfigReader;
 import org.apache.poi.hpsf.Array;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
@@ -321,7 +324,8 @@ public class HotelPage extends BasePage {
         List<WebElement> priceListHighToLow;
 
         public boolean priceIsHighToLowOrder() {
-                List<Double> li = new ArrayList<>();
+
+            List<Double> li = new ArrayList<>();
 
                 for (WebElement price : priceListHighToLow) {
                         li.add(Double.valueOf(price.getText().trim()));
@@ -462,7 +466,7 @@ public class HotelPage extends BasePage {
                 } else if (priceRange.equals("₹1001 - ₹2000")) {
                         for (String p : filterList) {
                                 Integer price = Integer.parseInt(p);
-                                if (!(price>=1001 && price<= 2000)) {
+                                if (!(price >= 1001 && price <= 2000)) {
                                         System.out.print(price);
                                         flag = false;
                                         break;
@@ -470,30 +474,30 @@ public class HotelPage extends BasePage {
                                 System.out.print(price);
 
                         }
-                } else if(priceRange.equals("₹2001 - ₹4000")) {
+                } else if (priceRange.equals("₹2001 - ₹4000")) {
                         for (String p : filterList) {
                                 Integer price = Integer.parseInt(p);
-                                if (!(price>=2001 && price<= 4000)) {
+                                if (!(price >= 2001 && price <= 4000)) {
                                         System.out.print(price);
                                         flag = false;
                                         break;
                                 }
                                 System.out.print(price);
                         }
-                }else if (priceRange.equals("₹4001 - ₹6000")) {
+                } else if (priceRange.equals("₹4001 - ₹6000")) {
                         for (String p : filterList) {
                                 Integer price = Integer.parseInt(p);
-                                if (!(price>=4001 && price<= 6000)) {
+                                if (!(price >= 4001 && price <= 6000)) {
                                         System.out.print(price);
                                         flag = false;
                                         break;
                                 }
                                 System.out.print(price);
                         }
-                } else if(priceRange.equals("₹6000 +")) {
+                } else if (priceRange.equals("₹6000 +")) {
                         for (String p : filterList) {
                                 Integer price = Integer.parseInt(p);
-                                if (!(price>=6000)) {
+                                if (!(price >= 6000)) {
                                         System.out.print(price);
                                         flag = false;
                                         break;
@@ -504,6 +508,104 @@ public class HotelPage extends BasePage {
                 return flag;
 
         }
+
+        public void selectRating(String rating) {
+                String s = "//div[@ratingcount='%s']";
+                String loc = String.format(s, rating);
+                driver.findElement(By.xpath(loc)).click();
+
+        }
+        @FindBy(xpath = "//span[@itemprop='ratingValue']")
+        WebElement ratingPoint;
+        public boolean ratingsAreDisplayed(String rating) {
+            try {
+                Thread.sleep(4000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            List<String> filterList = driver.findElements(By.xpath("//span[@itemprop='ratingValue']")).stream().map(WebElement::getText).toList();
+
+                boolean flag = true;
+                         for (String p : filterList) {
+                                String[] string = p.split("/");
+                                double r = Double.parseDouble(string[0]);
+                                double d=Double.parseDouble(rating);
+                                if (r<d) {
+                                        flag = false;
+                                        System.out.print(r+"failed");
+                                        break;
+                                }
+                                 System.out.print(r);
+                }
+                return flag;
+        }
+
+        public void selectStarRating(String star) {
+
+                String rating = "(//span[@class='Filtersstyles__StarRatingWrapperSpan-sc-bkjigy-7 ijCsnN'])['%s']";
+                String loc = String.format(rating,star);
+                driver.findElement(By.xpath(loc)).click();
+        }
+
+        public boolean starRatingIsDisplayedCorrectly(String star) {
+
+                String rating = String.format("//span[@content='%s']",star);
+                List<WebElement> filterList = driver.findElements(By.xpath(rating));
+                for(WebElement rate:filterList){
+                        if(!rate.isDisplayed()){
+                                return false;
+                        }
+                }
+                return true;
+
+        }
+
+        @FindBy(xpath = "//input[@placeholder='LOCATION NAME']")
+        WebElement inputCity;
+
+
+        public void enterCityOnUpdateSearch(String city) {
+
+                inputCity.clear();
+                inputCity.sendKeys(city);
+
+                String fCity1=String.format("(//div[contains(text(),'%s')])[1]",city);
+                WebElement selectCity=driver.findElement(By.xpath(fCity1));
+               waitForElementToBeVisible(selectCity);
+
+//                System.out.println(s.isDisplayed());
+//                JavascriptExecutor executor=(JavascriptExecutor) driver;
+//                executor.executeScript("arguments[0].click;",s);
+
+                Actions actions = new Actions(driver);
+                actions.moveToElement(inputCity).pause(1000)
+                        .keyDown(Keys.ARROW_DOWN).click(selectCity).keyUp(Keys.ARROW_DOWN)
+                        .build().perform();
+        }
+
+        @FindBy(xpath = "//span[@class='logSprite icClose']")
+        WebElement popUp;
+
+        @FindBy(xpath = "//button[text()='Update Search']")
+        WebElement updateSearchBtn;
+
+        public void clickOnUpdateSearchBtn() {
+
+                updateSearchBtn.click();
+                waitForElementToBeVisible(popUp);
+                popUp.click();
+
+        }
+
+        @FindBy(xpath = "//p[@class='PopularLocationsWidgetstyles__HeaderText-sc-1g4mi68-6 exLlEx']")
+        WebElement updatedText;
+
+        public boolean hotelsAreUpdated(String city) {
+                String s = updatedText.getText();
+                System.out.println(s);
+                return s.contains(city);
+        }
+//
 }
 
 

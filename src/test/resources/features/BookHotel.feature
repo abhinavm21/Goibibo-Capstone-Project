@@ -1,4 +1,4 @@
-Feature: Book Hotel
+Feature: Verify the functionalities of Hotel Booking
 
   Scenario: Search hotel
     Given user open goibibo website
@@ -41,10 +41,10 @@ Feature: Book Hotel
     And user clicks on price high to low
     Then verify the hotels displayed in price high to low order
 
-  Scenario:Verify rating of hotels are in descending order
+  Scenario:Verify customer rating of hotels are in descending order
     Given user open goibibo website
     When user select hotel booking
-    And user enters location "Chennai"
+    And user enters location "Mumbai"
     When user clicks on search
     And verify user is on hotels search page
     And user clicks on customer rating
@@ -112,5 +112,56 @@ Feature: Book Hotel
       | ₹2001 - ₹4000 |
       | ₹4001 - ₹6000 |
       | ₹6000 +       |
+
+  Scenario Outline:Verify customer rating filters are working properly
+    Given user open goibibo website
+    When user select hotel booking
+    And user enters location "Bangalore"
+    When user clicks on search
+    And verify user is on hotels search page
+    And user select one "<rating>"
+    Then verify the hotels with rating grater than "<rating>" is displayed on the search page
+
+    Examples:
+      | rating |
+      | 4.5    |
+      | 4      |
+      | 3.5    |
+      | 3      |
+
+  Scenario Outline:Verify star rating filters are working properly
+    Given user open goibibo website
+    When user select hotel booking
+    And user enters location "Bangalore"
+    When user clicks on search
+    And verify user is on hotels search page
+    And user select one star rating "<click_on_star>"
+    Then verify the hotels with star rating grater than "<no_of_star>" is displayed on the search page
+
+    Examples:
+      | click_on_star | no_of_star |
+      | 1             | 5          |
+      | 2             | 4          |
+      | 3             | 3          |
+
+
+  Scenario Outline:Verify the functionality of update search button
+    Given user open goibibo website
+    When user select hotel booking
+    And user enters location "Bangalore"
+    When user clicks on search
+    And verify user is on hotels search page
+    And user enters location "<city>" on update search
+    And user clicks on update search button
+    Then verify the hotel search page is updated by "<city>"
+
+    Examples:
+      | city    |
+      | Mumbai  |
+      | Goa     |
+      | Kolkata |
+
+
+
 
 
