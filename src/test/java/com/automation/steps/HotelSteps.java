@@ -156,5 +156,45 @@ public class HotelSteps {
     public void verifyPriceFiltersAreDisplayedInSearchPage(String priceRange) {
         Assert.assertTrue(hotelPage.priceRangeIsDisplayedCorrectly(priceRange));
     }
+
+    @And("user select one {string}")
+    public void userSelectOne(String rating) {
+        hotelPage.selectRating(rating);
+
+    }
+
+    @Then("verify the hotels with rating grater than {string} is displayed on the search page")
+    public void verifyTheHotelsWithRatingGraterThanIsDisplayedOnTheSearchPage(String rating) {
+        Assert.assertTrue(hotelPage.ratingsAreDisplayed(rating));
+    }
+
+    @And("user select one star rating {string}")
+    public void userSelectOneStarRating(String star) {
+        hotelPage.selectStarRating(star);
+
+    }
+
+    @Then("verify the hotels with star rating grater than {string} is displayed on the search page")
+    public void verifyTheHotelsWithStarRatingGraterThanIsDisplayedOnTheSearchPage(String star) {
+        Assert.assertTrue(hotelPage.starRatingIsDisplayedCorrectly(star));
+    }
+
+    @And("user enters location {string} on update search")
+    public void userEntersLocationOnUpdateSearch(String city) {
+        hotelPage.enterCityOnUpdateSearch(city);
+
+    }
+
+    @And("user clicks on update search button")
+    public void userClicksOnUpdateSearchButton() {
+        hotelPage.clickOnUpdateSearchBtn();
+
+    }
+
+
+    @Then("verify the hotel search page is updated by {string}")
+    public void verifyTheHotelSearchPageIsUpdatedBy(String city) {
+        Assert.assertTrue(hotelPage.hotelsAreUpdated(city));
+    }
 }
 
