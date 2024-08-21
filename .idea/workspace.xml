@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0888e45a-3db5-4999-b32e-c0af04d91228" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/280687.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/pages/HotelPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/pages/HotelPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/steps/HomeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/steps/HomeSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/steps/HotelSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/steps/HotelSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/BookHotel.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/BookHotel.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/pages/HolidayPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/pages/HolidayPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/steps/HolidaySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/steps/HolidaySteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/BookHoliday.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/BookHoliday.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +38,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Cucumber Java.Feature: BookHoliday.executor": "Run",
     "Cucumber Java.Scenario: Book the first hotel.executor": "Run",
     "Cucumber Java.Scenario: Search hotel.executor": "Run",
     "Cucumber Java.Scenario: Verify India is automatically selected by enter Indian city.executor": "Run",
@@ -59,7 +58,7 @@
     "Cucumber Java.Scenario: user can search flight.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "honeymoon__package",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/UST_java/MobileAutomation",
     "onboarding.tips.debug.path": "C:/UST_java/GoibiboCucumberAutomationProject/src/main/java/org/example/Main.java",
@@ -80,16 +79,15 @@
       <recent name="com.automation.steps" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Verify popular filters are working properly">
-    <configuration name="Scenario: Verify apartments are displayed on search page when we filter by apartment" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Feature: BookHoliday">
+    <configuration name="Feature: BookHoliday" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BookHotel.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BookHoliday.feature" />
       <option name="GLUE" value="com.automation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="GoibiboCucumberAutomationProject" />
-      <option name="NAME_FILTER" value="^Verify apartments are displayed on search page when we filter by apartment$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify apartments are displayed on search page when we filter by apartment$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verify apartments are displayed on search page when we filter by apartment" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: BookHoliday" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -183,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Feature: BookHoliday" />
         <item itemvalue="Cucumber Java.Scenario: Verify popular filters are working properly" />
         <item itemvalue="Cucumber Java.Scenario: Verify property type are displayed on search page when we filter by property type" />
         <item itemvalue="Cucumber Java.Scenario: Verify country type is automatically selected by enter city" />
         <item itemvalue="Cucumber Java.Scenario: Verify rating of hotels are in descending order" />
-        <item itemvalue="Cucumber Java.Scenario: Verify apartments are displayed on search page when we filter by apartment" />
       </list>
     </recent_temporary>
   </component>

@@ -1,11 +1,11 @@
 package com.automation.pages;
 
+import com.automation.utils.ConfigReader;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.List;
 import java.util.Set;
 
 public class HolidayPage extends BasePage{
@@ -49,24 +49,18 @@ public class HolidayPage extends BasePage{
         }
 
 
-        public void holidayPackageIsDiplayed() {
-        }
+        @FindBy(xpath = "//h1[text()='Holiday Packages']")
+        WebElement holidayPackage;
 
-        @FindBy(id="fromCity")
-        WebElement fromInput;
+        String destinationXpath = "//*[contains(@title,'%s')]";
 
-        @FindBy(id = "dest")
-        WebElement toInput;
+        @FindBy(xpath = "(//*[@class='variant-card-heading'])[1]" )
+        WebElement withFlightClick;
 
-        @FindBy(id = "date")
-        WebElement dateInput;
+        @FindBy(xpath = "//*[@class='skipBtn']")
+        WebElement skipBtn;
 
-        @FindBy(xpath = "(//div[@class='DayPicker-Caption'])[1]")
-        WebElement monthYearElement;
-
-
-        public void fromToDateSelect(String from, String to, String date) throws InterruptedException {
-
+        public boolean holidayPackageIsDisplayed() {
                 String originalWindow = driver.getWindowHandle();
                 Set<String> listOfWindow = driver.getWindowHandles();
 
@@ -76,19 +70,54 @@ public class HolidayPage extends BasePage{
                         }
                 }
 
+                return holidayPackage.isDisplayed();
+        }
+
+        public void selectDestination() {
+                String loc = String.format(destinationXpath,ConfigReader.getConfigValue("DestinationPackageName"));
+                driver.findElement(By.xpath(loc)).click();
+
+               if(isPresent(withFlightClick)){
+                      withFlightClick.click();
+               }
+        }
+
+        @FindBy(id="fromCity")
+        WebElement fromClick;
+
+        @FindBy(className = "citypicker_input")
+        WebElement fromInput;
+
+        @FindBy(xpath = "//*[text()='ROOMS & GUESTS']")
+        WebElement toClick;
+
+        @FindBy(id = "date")
+        WebElement dateInput;
+
+        @FindBy(xpath = "(//div[@class='DayPicker-Caption'])[1]")
+        WebElement monthYearElement;
+
+        @FindBy(xpath = "//div/button")
+        WebElement searchBtn;
+
+        String clickOnFirstSource = "//b[contains(text(),'%s')]";
+
+        public void fromToDateSelect(String from, String date)  {
+
+
+                if(isPresent(skipBtn)){
+                        skipBtn.click();
+                }
 
                 //select from
-                fromInput.click();
+                fromClick.click();
+                fromInput.clear();
                 fromInput.sendKeys(from);
-                
-
-                //select to
-
-                toInput.click();
-                toInput.sendKeys(to);
+                String loc = String.format(clickOnFirstSource,from);
+                driver.findElement(By.xpath(loc)).click();
 
                 //select date
-                dateInput.click();
+                //dateInput.click();
                 String monthYear = date.substring(date.indexOf(" ") + 1);
                 String day = date.substring(0, date.indexOf(" "));
 
@@ -96,12 +125,50 @@ public class HolidayPage extends BasePage{
                 while (!monthYear.equals(monthYearElement.getText())) {
 
                         //click right arrow button
-                        WebElement click = driver.findElement(By.xpath("//span[@aria-label=\"Next Month\"]"));
+                        WebElement click = driver.findElement(By.xpath("//span[@aria-label='Next Month']"));
                         click.click();
 
                 }
-                String xpathDay = String.format("//div[contains(text(),'%s')]", day);
+                String xpathDay = String.format("//*[@class='dateInnerPara' and contains(text(),'%s')]", day);
                 WebElement dayElement = driver.findElement(By.xpath(xpathDay));
                 dayElement.click();
+
+                //select outside to
+                Actions action = new Actions(driver);
+                action.moveToElement(toClick).pause(1000)
+                        .click(toClick)
+                        .build().perform();
+
+                //search
+                searchBtn.click();
+        }
+
+        @FindBy(className = "topHeading")
+        WebElement titleHeading;
+
+        public boolean verifyPackagePageIsDisplayed() {
+                String originalWindow = driver.getWindowHandle();
+                Set<String> listOfWindow = driver.getWindowHandles();
+
+                for (String window : listOfWindow) {
+                        if (!window.equals(originalWindow)) {
+                                driver.switchTo().window(window);
+                        }
+                }
+               return titleHeading.getText().contains(ConfigReader.getConfigValue("DestinationPackageName"));
+        }
+
+        @FindBy(xpath = "//*[@id=\"continue\"]/span")
+        WebElement proceedToPaymentBtn;
+
+        public void proceedToPaymentClick() {
+                proceedToPaymentBtn.click();
+        }
+
+        @FindBy(xpath = "(//div[1]/h4)[1]")
+        WebElement travellersText;
+
+        public boolean verifyDataFillingPageIsDisplayed() {
+                return travellersText.isDisplayed();
         }
 }

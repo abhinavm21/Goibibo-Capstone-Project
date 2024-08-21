@@ -6,11 +6,12 @@ Feature: Validating Holiday Booking
     Then verify user is on holiday search page
     When user select handcrafted honeymoon holiday type
     Then verify user is on holiday packages page
-    When user selects from "Cochin" to "New Delhi" and date "22 October 2024"
-    And user selects for destination package
+    When user selects for destination package
     Then verify package page is shown
-    When user clicks on proceed to payment
-    And user fills guest details
-    Then verify user is on  holidays payment page
+    When user selects from "Cochin" and date "22 October 2024"
+    And user clicks the proceed to payment button
+    Then verify user is on data filling page
+    When user fills guest details
+    Then verify user is on holidays payment page
 
 
