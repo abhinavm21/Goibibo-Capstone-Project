@@ -32,33 +32,59 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Cucumber Java.Scenario: Book the first Bus.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Search Bus.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Verify location changer is working.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Verify rating is in descending and ascending order.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Verify that travel from and to locations should not be same.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Verify the functionality of update search button.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: user can search flight.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.GoibiboCucumberAutomationProject [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.GoibiboCucumberAutomationProject [install].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/UST_java/Goibibo-Capstone-Project&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Cucumber Java.Scenario: Book the first hotel.executor": "Run",
+    "Cucumber Java.Scenario: Search hotel.executor": "Run",
+    "Cucumber Java.Scenario: Verify India is automatically selected by enter Indian city.executor": "Run",
+    "Cucumber Java.Scenario: Verify apartments are displayed on search page when we filter by apartment.executor": "Run",
+    "Cucumber Java.Scenario: Verify apartments is displayed on search page when we filter by apartment.executor": "Run",
+    "Cucumber Java.Scenario: Verify country type is automatically selected by enter city.executor": "Run",
+    "Cucumber Java.Scenario: Verify international radio button is automatically selected by enter international city.executor": "Run",
+    "Cucumber Java.Scenario: Verify popular filters are working properly.executor": "Run",
+    "Cucumber Java.Scenario: Verify price filters are working properly.executor": "Run",
+    "Cucumber Java.Scenario: Verify price of hotels are in high to low.executor": "Run",
+    "Cucumber Java.Scenario: Verify price of hotels are in low to high.executor": "Run",
+    "Cucumber Java.Scenario: Verify property type are displayed on search page when we filter by property type.executor": "Run",
+    "Cucumber Java.Scenario: Verify rating of hotels are in descending order.executor": "Run",
+    "Cucumber Java.Scenario: Verify that for one way trip from and to location should not be same (1).executor": "Run",
+    "Cucumber Java.Scenario: Verify that for one way trip from and to location should not be same (2).executor": "Run",
+    "Cucumber Java.Scenario: Verify that for one way trip from and to location should not be same.executor": "Run",
+    "Cucumber Java.Scenario: Verify villas are displayed on search page when we filter by villa.executor": "Run",
+    "Cucumber Java.Scenario: user can search flight.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/UST_java/MobileAutomation",
+    "onboarding.tips.debug.path": "C:/UST_java/GoibiboCucumberAutomationProject/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Verify rating is in descending and ascending order">
-    <configuration name="Scenario: Book the first Bus" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\UST_java\GoibiboCucumberAutomationProject\src\test\java\com\automation" />
+      <recent name="C:\UST_java\GoibiboCucumberAutomationProject\src\test\java\com\automation\utils" />
+      <recent name="C:\UST_java\GoibiboCucumberAutomationProject\src\test\resources\config" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.automation.utils" />
+      <recent name="com.automation.pages" />
+      <recent name="com.automation.steps" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Cucumber Java.Scenario: Verify country type is automatically selected by enter city">
+    <configuration name="Scenario: Verify country type is automatically selected by enter city" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BusBooking.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BookHotel.feature" />
       <option name="GLUE" value="com.automation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="GoibiboCucumberAutomationProject" />
-      <option name="NAME_FILTER" value="^Book the first Bus$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Book the first Bus$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Book the first Bus" />
+      <option name="NAME_FILTER" value="^Verify country type is automatically selected by enter city$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify country type is automatically selected by enter city$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verify country type is automatically selected by enter city" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -70,15 +96,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Search Bus" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Verify popular filters are working properly" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BusBooking.feature" />
       <option name="GLUE" value="com.automation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="GoibiboCucumberAutomationProject" />
-      <option name="NAME_FILTER" value="^Search Bus$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Search Bus$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Search Bus" />
+      <option name="NAME_FILTER" value="^Verify popular filters are working properly$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify popular filters are working properly$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verify popular filters are working properly" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -90,15 +116,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Verify location changer is working" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Verify price filters are working properly" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BusBooking.feature" />
       <option name="GLUE" value="com.automation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="GoibiboCucumberAutomationProject" />
-      <option name="NAME_FILTER" value="^Verify location changer is working$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify location changer is working$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verify location changer is working" />
+      <option name="NAME_FILTER" value="^Verify price filters are working properly$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify price filters are working properly$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verify price filters are working properly" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -130,15 +156,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Verify that travel from and to locations should not be same" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: user can search flight" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BusBooking.feature" />
-      <option name="GLUE" value="com.automation.steps" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BookFlight.feature" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="GoibiboCucumberAutomationProject" />
-      <option name="NAME_FILTER" value="^Verify that travel from and to locations should not be same$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify that travel from and to locations should not be same$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verify that travel from and to locations should not be same" />
+      <option name="NAME_FILTER" value="^user can search flight$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^user can search flight$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: user can search flight" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -152,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: Verify rating is in descending and ascending order" />
-        <item itemvalue="Cucumber Java.Scenario: Book the first Bus" />
-        <item itemvalue="Cucumber Java.Scenario: Verify that travel from and to locations should not be same" />
-        <item itemvalue="Cucumber Java.Scenario: Verify location changer is working" />
-        <item itemvalue="Cucumber Java.Scenario: Search Bus" />
+        <item itemvalue="Cucumber Java.Scenario: Verify country type is automatically selected by enter city" />
+        <item itemvalue="Cucumber Java.Scenario: Verify price filters are working properly" />
+        <item itemvalue="Cucumber Java.Scenario: Verify popular filters are working properly" />
+        <item itemvalue="Cucumber Java.Scenario: user can search flight" />
+        <item itemvalue="Cucumber Java.Scenario: Verify property type are displayed on search page when we filter by property type" />
       </list>
     </recent_temporary>
   </component>
