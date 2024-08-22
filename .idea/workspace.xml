@@ -5,48 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a55a4a47-7160-427a-b5a5-81dfedd08c2e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/automation/pages/BusPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/automation/steps/BusSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/BusBooking.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/css/cucumber.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/images/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/js/Chart.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/js/jquery.tablesorter.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/js/moment.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/overview-failures.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/overview-features.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/overview-steps.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/overview-tags.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/report-feature_file-src-test-resources-features-BookFlight-feature.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/report-feature_file-src-test-resources-features-BookHotel-feature.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/3b470957-813d-4429-83f2-78e9370fceee-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/612fd8f5-0068-4f3e-8b42-c598b476599d-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/pages/FlightPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/pages/FlightPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/pages/HotelPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/pages/HotelPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/runner/TestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/steps/FlightSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/steps/FlightSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/steps/HomeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/steps/HomeSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/steps/HotelSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/steps/HotelSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/BookFlight.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/FlightBooking.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/BookHotel.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/HotelBooking.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/pages/BusPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/pages/BusPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/steps/BusSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/steps/BusSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/BusBooking.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/BusBooking.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,20 +34,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Cucumber Java.Scenario: Book the first Bus.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Search Bus.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Verify the functionality of update search button.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: user can search flight.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.GoibiboCucumberAutomationProject [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.GoibiboCucumberAutomationProject [install].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;verify__update__search&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/UST_java/Goibibo-Capstone-Project&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Cucumber Java.Scenario: Book the first Bus.executor": "Run",
+    "Cucumber Java.Scenario: Search Bus.executor": "Run",
+    "Cucumber Java.Scenario: Verify location changer is working.executor": "Run",
+    "Cucumber Java.Scenario: Verify that travel from and to locations should not be same.executor": "Run",
+    "Cucumber Java.Scenario: Verify the functionality of update search button.executor": "Run",
+    "Cucumber Java.Scenario: user can search flight.executor": "Run",
+    "Maven.GoibiboCucumberAutomationProject [clean].executor": "Run",
+    "Maven.GoibiboCucumberAutomationProject [install].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/UST_java/Goibibo-Capstone-Project"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Cucumber Java.Scenario: Book the first Bus">
     <configuration name="Scenario: Book the first Bus" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
@@ -127,15 +91,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Verify the functionality of update search button" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Verify location changer is working" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/HotelBooking.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BusBooking.feature" />
       <option name="GLUE" value="com.automation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="GoibiboCucumberAutomationProject" />
-      <option name="NAME_FILTER" value="^Verify the functionality of update search button$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify the functionality of update search button$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verify the functionality of update search button" />
+      <option name="NAME_FILTER" value="^Verify location changer is working$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify location changer is working$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verify location changer is working" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Verify that travel from and to locations should not be same" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BusBooking.feature" />
+      <option name="GLUE" value="com.automation.steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="GoibiboCucumberAutomationProject" />
+      <option name="NAME_FILTER" value="^Verify that travel from and to locations should not be same$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify that travel from and to locations should not be same$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verify that travel from and to locations should not be same" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -170,9 +154,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber Java.Scenario: Book the first Bus" />
+        <item itemvalue="Cucumber Java.Scenario: Verify that travel from and to locations should not be same" />
+        <item itemvalue="Cucumber Java.Scenario: Verify location changer is working" />
         <item itemvalue="Cucumber Java.Scenario: Search Bus" />
         <item itemvalue="Cucumber Java.Scenario: user can search flight" />
-        <item itemvalue="Cucumber Java.Scenario: Verify the functionality of update search button" />
       </list>
     </recent_temporary>
   </component>
@@ -186,5 +171,28 @@
       <updated>1724301410866</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

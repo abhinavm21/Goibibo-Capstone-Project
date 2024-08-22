@@ -102,4 +102,19 @@ public class BusSteps {
     public void verifySendPaymentRequestAndQROptionIsDisplayed() {
         Assert.assertTrue(busPage.paymentRequestAndQROptionIsDisplayed());
     }
+
+    @When("user clicks on location changer")
+    public void userClicksOnLocationChanger() {
+        busPage.clickOnLocationChanger();
+    }
+
+    @Then("verify source and destination is interchanged by {string} to {string}")
+    public void verifySourceAndDestinationIsInterchangedByTo(String source, String destination) {
+        Assert.assertTrue(busPage.locationsInterchanged(source,destination));
+    }
+
+    @Then("verify error message is displayed")
+    public void verifyErrorMessageIsDisplayed() {
+        Assert.assertTrue(busPage.errorMsgDisplayed());
+    }
 }

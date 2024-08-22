@@ -18,10 +18,10 @@ public class BusPage extends BasePage{
         busIcon.click();
 
     }
-    @FindBy(id = "autosuggestBusSRPSrcHome")
+    @FindBy(xpath = "//input[@placeholder='Enter Source']")
     WebElement source;
 
-    @FindBy(id = "autosuggestBusSRPDestHome")
+    @FindBy(xpath = "//input[@placeholder='Enter Destination']")
     WebElement destination;
 
     public void searchForBus(String from, String to) {
@@ -208,5 +208,27 @@ public class BusPage extends BasePage{
 
     public boolean paymentRequestAndQROptionIsDisplayed() {
         return paymentRequestBtn.isDisplayed() && qrOption.isDisplayed();
+    }
+
+    @FindBy(css = ".SearchWidgetstyles__SwapIconWrap-sc-1mr4hwz-9.eoDMqf")
+    WebElement locationIcon;
+
+    public void clickOnLocationChanger() {
+        locationIcon.click();
+    }
+
+
+    public boolean locationsInterchanged(String source1, String destination1) {
+
+        System.out.println(source.getAttribute("value")+"="+source1);
+        System.out.println(destination.getAttribute("value")+"="+destination1);
+
+        return source.getAttribute("value").equals(source1) && destination.getAttribute("value").equals(destination1);
+    }
+    @FindBy(xpath = "//label[@data-testid='autosuggestErrorText']")
+    WebElement errorMsg;
+
+    public boolean errorMsgDisplayed() {
+        return errorMsg.isDisplayed();
     }
 }

@@ -25,3 +25,19 @@ Feature: Verify the functionalities of Bus Booking
     Then verify user is on the payment page
     When user clicks on UPI options
     Then verify send payment request and QR option  is displayed
+
+
+  Scenario: Verify location changer is working
+    Given user open goibibo website
+    When user select bus booking
+    And user search Bus from "Thrissur" and to "Ernakulam"
+    When user clicks on location changer
+    Then verify source and destination is interchanged by "Ernakulam" to "Thrissur"
+
+  Scenario: Verify that travel from and to locations should not be same
+    Given user open goibibo website
+    When user select bus booking
+    And user search Bus from "Thrissur" and to "Thrissur"
+    When user clicks on search button of bus
+    Then verify error message is displayed
+
