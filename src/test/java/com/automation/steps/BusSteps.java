@@ -40,15 +40,11 @@ public class BusSteps {
 
     }
 
-    @And("user clicks on show buses Button if the bus is KSRTC")
-    public void userClicksOnShowBusesButtonIfTheBusIsKSRTC() {
+    @And("user clicks on show buses Button if the bus is KSRTC otherwise select seat directly")
+    public void userClicksOnShowBusesButtonIfTheBusIsKSRTCOtherwiseSelectSeatDirectly() {
 
         busPage.selectKSRTCBus();
-    }
 
-    @And("user clicks on select seat")
-    public void userClicksOnSelectSeat() {
-         busPage.clickOnSelectSeat();
     }
 
     @And("verify seats are visible")
@@ -117,4 +113,28 @@ public class BusSteps {
     public void verifyErrorMessageIsDisplayed() {
         Assert.assertTrue(busPage.errorMsgDisplayed());
     }
+
+
+    @And("user clicks on rating")
+    public void userClicksOnRating() {
+        busPage.clickOnRating();
+    }
+
+    @Then("verify rating is in descending order")
+    public void verifyRatingIsInDescendingOrder() {
+        Assert.assertTrue(busPage.ratingsInDescendingOder());
+    }
+
+    @When("again user clicks on rating")
+    public void againUserClicksOnRating() {
+        busPage.clickOnRatingAscending();
+    }
+
+    @Then("verify  rating is in ascending order")
+    public void verifyRatingIsInAscendingOrder() {
+
+        Assert.assertTrue(busPage.ratingsInAscendingOder());
+    }
+
+
 }

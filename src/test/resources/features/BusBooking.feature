@@ -11,11 +11,10 @@ Feature: Verify the functionalities of Bus Booking
   Scenario: Book the first Bus
     Given user open goibibo website
     When user select bus booking
-    And user search Bus from "Calicut" and to "Ernakulam"
+    And user search Bus from "Thrissur" and to "Ernakulam"
     And user select date "12 September 2024"
     And user clicks on search button of bus
-    And user clicks on show buses Button if the bus is KSRTC
-    And user clicks on select seat
+    And user clicks on show buses Button if the bus is KSRTC otherwise select seat directly
     Then verify seats are visible
     When user select seat
     And user clicks on continue
@@ -40,4 +39,16 @@ Feature: Verify the functionalities of Bus Booking
     And user search Bus from "Thrissur" and to "Thrissur"
     When user clicks on search button of bus
     Then verify error message is displayed
+
+
+  Scenario: Verify rating is in descending and ascending order
+    Given user open goibibo website
+    When user select bus booking
+    And user search Bus from "Bangalore" and to "Mumbai"
+    When user clicks on search button of bus
+    And user clicks on rating
+    Then verify rating is in descending order
+    When again user clicks on rating
+    Then verify  rating is in ascending order
+
 

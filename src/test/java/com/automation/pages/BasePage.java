@@ -26,6 +26,15 @@ public class BasePage {
     public void waitForElementToBeVisible(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
+    public boolean waitForElement(WebElement element){
+        wait.until(ExpectedConditions.visibilityOf(element));
+        if (element.isDisplayed()){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 
     public  void dateSelection(WebElement departureDate, List<WebElement> monthYearElement,WebElement arrowClick,String dateXpath,String date){
         //select date

@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends BasePage{
 
-    @FindBy(xpath = "//div[@class='sc-fXSgeo fclkTx']")
+    @FindBy(xpath = "//span[@aria-hidden='true']")
     WebElement popUp1;
 
     @FindBy(xpath = "//span[@class='logSprite icClose']")

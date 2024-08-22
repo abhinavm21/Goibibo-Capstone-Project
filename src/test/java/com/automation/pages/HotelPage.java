@@ -519,7 +519,7 @@ public class HotelPage extends BasePage {
         WebElement ratingPoint;
         public boolean ratingsAreDisplayed(String rating) {
             try {
-                Thread.sleep(4000);
+                Thread.sleep(3000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

@@ -5,10 +5,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 
-public class BusPage extends BasePage{
+public class BusPage extends BasePage {
 
     @FindBy(xpath = "//span[text()='Bus']")
     WebElement busIcon;
@@ -18,6 +22,7 @@ public class BusPage extends BasePage{
         busIcon.click();
 
     }
+
     @FindBy(xpath = "//input[@placeholder='Enter Source']")
     WebElement source;
 
@@ -26,11 +31,11 @@ public class BusPage extends BasePage{
 
     public void searchForBus(String from, String to) {
         source.sendKeys(from);
-        String selectSource=String.format("(//span[contains(text(),'%s')])[1]",from);
+        String selectSource = String.format("(//span[contains(text(),'%s')])[1]", from);
         driver.findElement(By.xpath(selectSource)).click();
 
         destination.sendKeys(to);
-        String selectDestination=String.format("(//span[contains(text(),'%s')])[1]",to);
+        String selectDestination = String.format("(//span[contains(text(),'%s')])[1]", to);
         driver.findElement(By.xpath(selectDestination)).click();
     }
 
@@ -43,16 +48,17 @@ public class BusPage extends BasePage{
     @FindBy(css = ".dcalendarstyles__MonthChangeRightArrowDiv-sc-r2jz2t-16.iJqGSS")
     WebElement arrowClick;
 
-    String dateXpath="//span[text()='%s']";
+    String dateXpath = "//span[text()='%s']";
 
     public void selectDate(String date) {
 
-        dateSelection(departureDate,monthYearElement,arrowClick,dateXpath,date);
+        dateSelection(departureDate, monthYearElement, arrowClick, dateXpath, date);
 
     }
 
     @FindBy(xpath = "//button[@data-testid='searchBusBtn']")
     WebElement searchBtn;
+
     public void clickOnSearch() {
 
         searchBtn.click();
@@ -74,19 +80,23 @@ public class BusPage extends BasePage{
     @FindBy(xpath = "//span[text()='SHOW BUSES']")
     WebElement showBuses;
 
-    public void selectKSRTCBus() {
-        if(ksrtc.isDisplayed()){
+    @FindBy(xpath = "(//span[text()='SELECT SEAT'])[1]")
+    WebElement selectSeatBtn;
+
+    public void selectKSRTCBus() throws NoSuchElementException {
+        try{
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+            ksrtc.isDisplayed();
             showBuses.click();
+            selectSeatBtn.click();
+        } catch (Exception e){
+            selectSeatBtn.click();
+        }finally {
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         }
 
     }
 
-    @FindBy(xpath = "(//span[text()='SELECT SEAT'])[1]")
-    WebElement selectSeatBtn;
-    public void clickOnSelectSeat() {
-
-        selectSeatBtn.click();
-    }
 
     @FindBy(xpath = "//button[text()='SELECT SEATS TO PROCEED']")
     WebElement proceedWithSelectedSeat;
@@ -103,9 +113,9 @@ public class BusPage extends BasePage{
     WebElement otherSeats;
 
     public void selectSeat() {
-        if(ladiesSeat.isDisplayed()){
+        if (ladiesSeat.isDisplayed()) {
             ladiesSeat.click();
-        }else {
+        } else {
             otherSeats.click();
         }
     }
@@ -120,6 +130,7 @@ public class BusPage extends BasePage{
 
     @FindBy(xpath = "//header[text()='Review your Booking']")
     WebElement reviewBooking;
+
     public boolean reviewOfBookingTextIsDisplayed() {
         waitForElementToBeVisible(reviewBooking);
         return reviewBooking.isDisplayed();
@@ -160,9 +171,9 @@ public class BusPage extends BasePage{
         fName.sendKeys(ConfigReader.getConfigValue("fname"));
         age.sendKeys(ConfigReader.getConfigValue("age"));
 
-        if (!maleGender.isDisplayed()){
+        if (!maleGender.isDisplayed()) {
             femaleGender.click();
-        }else {
+        } else {
             maleGender.click();
         }
 
@@ -172,9 +183,9 @@ public class BusPage extends BasePage{
         pinCode.sendKeys(ConfigReader.getConfigValue("pinCode"));
 
         clickState.click();
-        String selectState=String.format("//li[text()='%s']", ConfigReader.getConfigValue("state"));
-       driver.findElement(By.xpath(selectState)).click();
-       confirmCheckBox.click();
+        String selectState = String.format("//li[text()='%s']", ConfigReader.getConfigValue("state"));
+        driver.findElement(By.xpath(selectState)).click();
+        confirmCheckBox.click();
 
     }
 
@@ -197,7 +208,7 @@ public class BusPage extends BasePage{
     }
 
     public void clickOnUPIOptions() {
-           UPIOptions.click();
+        UPIOptions.click();
     }
 
     @FindBy(xpath = "//button[text()='Send payment request']")
@@ -220,15 +231,72 @@ public class BusPage extends BasePage{
 
     public boolean locationsInterchanged(String source1, String destination1) {
 
-        System.out.println(source.getAttribute("value")+"="+source1);
-        System.out.println(destination.getAttribute("value")+"="+destination1);
+        System.out.println(source.getAttribute("value") + "=" + source1);
+        System.out.println(destination.getAttribute("value") + "=" + destination1);
 
         return source.getAttribute("value").equals(source1) && destination.getAttribute("value").equals(destination1);
     }
+
     @FindBy(xpath = "//label[@data-testid='autosuggestErrorText']")
     WebElement errorMsg;
 
     public boolean errorMsgDisplayed() {
         return errorMsg.isDisplayed();
     }
+
+    @FindBy(xpath = "//span[@data-val='rating_high']")
+    WebElement ratingDesc;
+
+    public void clickOnRating() {
+        ratingDesc.click();
+    }
+
+    @FindBy(css = ".SrpActiveCardstyles__NumbersBoldSpan-sc-yk1110-16.rjPWt")
+    List<WebElement> ratingList;
+    public boolean ratingsInDescendingOder() {
+
+        List<Double> li = new ArrayList<>();
+
+        for (WebElement rate : ratingList) {
+            li.add(Double.valueOf(rate.getText().trim()));
+        }
+        System.out.println("Original list (high to low) \n" + li);
+
+        List<Double> copy_li = new ArrayList<>(li);
+        System.out.println("Copy of original list(high to low) \n " + copy_li);
+
+        Collections.sort(copy_li);
+        System.out.println("Sorted list (low to high) \n" + copy_li);
+
+        Collections.reverse(copy_li);
+        System.out.println("reverse sorter list (high to low)\n" + copy_li);
+
+        return li.equals(copy_li);
+    }
+
+    @FindBy(xpath = "//span[@data-val='rating_low']")
+    WebElement ratingAsc;
+
+    public void clickOnRatingAscending() {
+         ratingAsc.click();
+    }
+
+    public boolean ratingsInAscendingOder() {
+        List<Double> li = new ArrayList<>();
+
+        for (WebElement rate : ratingList) {
+            li.add(Double.valueOf(rate.getText().trim()));
+        }
+        System.out.println("Original list (high to low) \n" + li);
+
+        List<Double> copy_li = new ArrayList<>(li);
+        System.out.println("Copy of original list(high to low) \n " + copy_li);
+
+        Collections.sort(copy_li);
+        System.out.println("Sorted list (low to high) \n" + copy_li);
+
+        return li.equals(copy_li);
+    }
+
+
 }
