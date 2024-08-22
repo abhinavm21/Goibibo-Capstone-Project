@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a55a4a47-7160-427a-b5a5-81dfedd08c2e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/pages/BusPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/pages/BusPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/pages/HotelPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/pages/HotelPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/steps/BusSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/steps/BusSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/BusBooking.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/BusBooking.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,23 +32,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Cucumber Java.Scenario: Book the first Bus.executor": "Run",
-    "Cucumber Java.Scenario: Search Bus.executor": "Run",
-    "Cucumber Java.Scenario: Verify location changer is working.executor": "Run",
-    "Cucumber Java.Scenario: Verify rating is in descending and ascending order.executor": "Run",
-    "Cucumber Java.Scenario: Verify that travel from and to locations should not be same.executor": "Run",
-    "Cucumber Java.Scenario: Verify the functionality of update search button.executor": "Run",
-    "Cucumber Java.Scenario: user can search flight.executor": "Run",
-    "Maven.GoibiboCucumberAutomationProject [clean].executor": "Run",
-    "Maven.GoibiboCucumberAutomationProject [install].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/UST_java/Goibibo-Capstone-Project"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cucumber Java.Scenario: Book the first Bus.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Search Bus.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify location changer is working.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify rating is in descending and ascending order.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify that travel from and to locations should not be same.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify the functionality of update search button.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: user can search flight.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.GoibiboCucumberAutomationProject [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.GoibiboCucumberAutomationProject [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/UST_java/Goibibo-Capstone-Project&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Cucumber Java.Scenario: Verify rating is in descending and ascending order">
     <configuration name="Scenario: Book the first Bus" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
