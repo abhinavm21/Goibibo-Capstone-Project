@@ -46,4 +46,9 @@ public class FlightSteps {
     public void userEntersSameLocationForFromAndToFieldForFlight(String from, String to) throws InterruptedException {
         flightPage.searchForFlight(from,to);
     }
+
+    @And("verify user can see flights on flight search page")
+    public void verifyUserCanSeeFlightsOnFlightSearchPage() {
+        Assert.assertTrue(flightPage.viewFareIsDisplayed());
+    }
 }

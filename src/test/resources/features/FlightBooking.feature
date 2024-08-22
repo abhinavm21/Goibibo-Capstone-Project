@@ -6,6 +6,8 @@ Feature: validating flight search feature
 	    And select departure date "12 December 2024"
 		And user clicks on search button
 		Then verify user is on flight search page
+		And verify user can see flights on flight search page
+
 
     Scenario: Verify that for one way trip from and to location should not be same
 	    Given user open goibibo website
