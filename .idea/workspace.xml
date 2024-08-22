@@ -4,12 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0888e45a-3db5-4999-b32e-c0af04d91228" name="Changes" comment="hotel price scenario sorting added">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/BookBus.feature" afterDir="false" />
+    <list default="true" id="a55a4a47-7160-427a-b5a5-81dfedd08c2e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/automation/pages/BusPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/automation/steps/BusSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/BusBooking.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/css/cucumber.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/images/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/js/Chart.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/js/jquery.tablesorter.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/js/moment.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/overview-failures.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/overview-features.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/overview-steps.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/overview-tags.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/report-feature_file-src-test-resources-features-BookFlight-feature.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberReport/cucumber-html-reports/report-feature_file-src-test-resources-features-BookHotel-feature.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/3b470957-813d-4429-83f2-78e9370fceee-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/612fd8f5-0068-4f3e-8b42-c598b476599d-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/pages/FlightPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/pages/FlightPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/pages/HotelPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/pages/HotelPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/runner/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/steps/FlightSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/steps/FlightSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/steps/HomeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/steps/HomeSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/steps/HotelSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/steps/HotelSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/BookHotel.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/BookHotel.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/BookFlight.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/FlightBooking.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/BookHotel.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/HotelBooking.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,73 +64,38 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
+  &quot;associatedIndex&quot;: 1
 }</component>
-  <component name="ProjectId" id="2kjw4iDTJlqSTOrhldpw7xhIZ4P" />
+  <component name="ProjectId" id="2kzztswfSrlXXB15J6TBHgGWjQ2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Cucumber Java.Scenario: Book the first hotel.executor": "Run",
-    "Cucumber Java.Scenario: Search hotel.executor": "Run",
-    "Cucumber Java.Scenario: Verify India is automatically selected by enter Indian city.executor": "Run",
-    "Cucumber Java.Scenario: Verify apartments are displayed on search page when we filter by apartment.executor": "Run",
-    "Cucumber Java.Scenario: Verify apartments is displayed on search page when we filter by apartment.executor": "Run",
-    "Cucumber Java.Scenario: Verify country type is automatically selected by enter city.executor": "Run",
-    "Cucumber Java.Scenario: Verify customer rating filters are working properly.executor": "Run",
-    "Cucumber Java.Scenario: Verify customer rating of hotels are in descending order.executor": "Run",
-    "Cucumber Java.Scenario: Verify international radio button is automatically selected by enter international city.executor": "Run",
-    "Cucumber Java.Scenario: Verify popular filters are working properly.executor": "Run",
-    "Cucumber Java.Scenario: Verify price filters are working properly.executor": "Run",
-    "Cucumber Java.Scenario: Verify price of hotels are in high to low.executor": "Run",
-    "Cucumber Java.Scenario: Verify price of hotels are in low to high.executor": "Run",
-    "Cucumber Java.Scenario: Verify property type are displayed on search page when we filter by property type.executor": "Run",
-    "Cucumber Java.Scenario: Verify rating of hotels are in descending order.executor": "Run",
-    "Cucumber Java.Scenario: Verify star rating filters are working properly.executor": "Run",
-    "Cucumber Java.Scenario: Verify that for one way trip from and to location should not be same (1).executor": "Run",
-    "Cucumber Java.Scenario: Verify that for one way trip from and to location should not be same (2).executor": "Run",
-    "Cucumber Java.Scenario: Verify that for one way trip from and to location should not be same.executor": "Run",
-    "Cucumber Java.Scenario: Verify the functionality of update search button.executor": "Run",
-    "Cucumber Java.Scenario: Verify villas are displayed on search page when we filter by villa.executor": "Run",
-    "Cucumber Java.Scenario: user can search flight.executor": "Run",
-    "Maven.GoibiboCucumberAutomationProject [clean].executor": "Run",
-    "Maven.GoibiboCucumberAutomationProject [install].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/UST_java/Goibibo-Capstone-Project",
-    "onboarding.tips.debug.path": "C:/UST_java/GoibiboCucumberAutomationProject/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cucumber Java.Scenario: Book the first Bus.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Search Bus.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify the functionality of update search button.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: user can search flight.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.GoibiboCucumberAutomationProject [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.GoibiboCucumberAutomationProject [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;verify__update__search&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/UST_java/Goibibo-Capstone-Project&quot;
   }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\UST_java\GoibiboCucumberAutomationProject\src\test\java\com\automation" />
-      <recent name="C:\UST_java\GoibiboCucumberAutomationProject\src\test\java\com\automation\utils" />
-      <recent name="C:\UST_java\GoibiboCucumberAutomationProject\src\test\resources\config" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.automation.utils" />
-      <recent name="com.automation.pages" />
-      <recent name="com.automation.steps" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Verify the functionality of update search button">
-    <configuration name="Scenario: Book the first hotel" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RunManager" selected="Cucumber Java.Scenario: Book the first Bus">
+    <configuration name="Scenario: Book the first Bus" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BookHotel.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BusBooking.feature" />
       <option name="GLUE" value="com.automation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="GoibiboCucumberAutomationProject" />
-      <option name="NAME_FILTER" value="^Book the first hotel$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Book the first hotel$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Book the first hotel" />
+      <option name="NAME_FILTER" value="^Book the first Bus$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Book the first Bus$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Book the first Bus" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -105,55 +107,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Verify customer rating filters are working properly" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Search Bus" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BookHotel.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BusBooking.feature" />
       <option name="GLUE" value="com.automation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="GoibiboCucumberAutomationProject" />
-      <option name="NAME_FILTER" value="^Verify customer rating filters are working properly$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify customer rating filters are working properly$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verify customer rating filters are working properly" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Verify customer rating of hotels are in descending order" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BookHotel.feature" />
-      <option name="GLUE" value="com.automation.steps" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="GoibiboCucumberAutomationProject" />
-      <option name="NAME_FILTER" value="^Verify customer rating of hotels are in descending order$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify customer rating of hotels are in descending order$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verify customer rating of hotels are in descending order" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Verify rating of hotels are in descending order" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BookHotel.feature" />
-      <option name="GLUE" value="com.automation.steps" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="GoibiboCucumberAutomationProject" />
-      <option name="NAME_FILTER" value="^Verify rating of hotels are in descending order$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify rating of hotels are in descending order$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verify rating of hotels are in descending order" />
+      <option name="NAME_FILTER" value="^Search Bus$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Search Bus$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Search Bus" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -167,7 +129,7 @@
     </configuration>
     <configuration name="Scenario: Verify the functionality of update search button" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BookHotel.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/HotelBooking.feature" />
       <option name="GLUE" value="com.automation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="GoibiboCucumberAutomationProject" />
@@ -185,60 +147,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scenario: user can search flight" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/FlightBooking.feature" />
+      <option name="GLUE" value="com.automation.steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="GoibiboCucumberAutomationProject" />
+      <option name="NAME_FILTER" value="^user can search flight$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^user can search flight$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: user can search flight" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: Book the first Bus" />
+        <item itemvalue="Cucumber Java.Scenario: Search Bus" />
+        <item itemvalue="Cucumber Java.Scenario: user can search flight" />
         <item itemvalue="Cucumber Java.Scenario: Verify the functionality of update search button" />
-        <item itemvalue="Cucumber Java.Scenario: Book the first hotel" />
-        <item itemvalue="Cucumber Java.Scenario: Verify customer rating of hotels are in descending order" />
-        <item itemvalue="Cucumber Java.Scenario: Verify customer rating filters are working properly" />
-        <item itemvalue="Cucumber Java.Scenario: Verify rating of hotels are in descending order" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0888e45a-3db5-4999-b32e-c0af04d91228" name="Changes" comment="" />
-      <created>1723810108535</created>
+      <changelist id="a55a4a47-7160-427a-b5a5-81dfedd08c2e" name="Changes" comment="" />
+      <created>1724301410866</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1723810108535</updated>
+      <updated>1724301410866</updated>
     </task>
-    <task id="LOCAL-00001" summary="hotel price scenario sorting added">
-      <option name="closed" value="true" />
-      <created>1724050645640</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1724050645640</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="hotel price scenario sorting added" />
-    <option name="LAST_COMMIT_MESSAGE" value="hotel price scenario sorting added" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

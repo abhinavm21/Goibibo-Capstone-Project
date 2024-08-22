@@ -196,5 +196,8 @@ public class HotelSteps {
     public void verifyTheHotelSearchPageIsUpdatedBy(String city) {
         Assert.assertTrue(hotelPage.hotelsAreUpdated(city));
     }
+
+
+
 }
 

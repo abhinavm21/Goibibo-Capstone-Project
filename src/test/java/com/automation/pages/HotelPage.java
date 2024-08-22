@@ -104,7 +104,7 @@ public class HotelPage extends BasePage {
                 search.click();
         }
 
-        @FindBy(xpath = "//span[text()='Hotel' and @class='HotelCardstyles__HotelTypeTag-sc-1s80tyk-17 gyCpqt']")
+        @FindBy(xpath = "(//span[text()='Hotel' and @class='HotelCardstyles__HotelTypeTag-sc-1s80tyk-17 gyCpqt'])[1]")
         WebElement hotelDisplayed;
 
         public boolean hotelSearchPageIsDisplayed() {

@@ -39,33 +39,22 @@ public class FlightPage extends BasePage {
         driver.findElement(By.xpath(loc1)).click();
 
     }
+
+
     @FindBy(xpath = "(//p[@class='sc-12foipm-4 czGBLf fswWidgetTitle'])[3]")
     WebElement departureDate;
 
     @FindBy(xpath = "(//div[@class='DayPicker-Caption'])[1]")
     List<WebElement> monthYearElement;
 
+    @FindBy(xpath = "//span[@aria-label=\"Next Month\"]")
+    WebElement arrowClick;
+
+    String dateXpath="//p[@class=\"fsw__date\" and contains(text(),'%s')]";
+
     public void selectDepartureDate(String date1){
 
-        //select date
-        departureDate.click();
-        String monthYear = date1.substring(date1.indexOf(" ") + 1);
-        String day = date1.substring(0, date1.indexOf(" "));
-
-
-        while (!monthYear.equals(monthYearElement.get(0).getText())) {
-
-            //click right arrow button
-            WebElement click = driver.findElement(By.xpath("//span[@aria-label=\"Next Month\"]"));
-            click.click();
-
-            List<WebElement> monthYearElements;
-
-
-        }
-        String xpathDay = String.format("//p[@class=\"fsw__date\" and contains(text(),'%s')]", day);
-        WebElement dayElement = driver.findElement(By.xpath(xpathDay));
-        dayElement.click();
+        dateSelection(departureDate,monthYearElement,arrowClick,dateXpath,date1);
 
     }
 
@@ -80,5 +69,12 @@ public class FlightPage extends BasePage {
     WebElement errorMsg;
     public String errorMessageIsDisplayed() {
         return errorMsg.getText();
+    }
+
+
+    @FindBy(xpath = "//button[text()='VIEW FARES']")
+    WebElement viewFareButton;
+    public boolean viewFareIsDisplayed() {
+        return viewFareButton.isDisplayed();
     }
 }
