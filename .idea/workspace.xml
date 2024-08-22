@@ -36,37 +36,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Cucumber Java.Feature: BookHoliday.executor": "Run",
-    "Cucumber Java.Scenario: Book the first hotel.executor": "Run",
-    "Cucumber Java.Scenario: Search hotel.executor": "Run",
-    "Cucumber Java.Scenario: Verify India is automatically selected by enter Indian city.executor": "Run",
-    "Cucumber Java.Scenario: Verify apartments are displayed on search page when we filter by apartment.executor": "Run",
-    "Cucumber Java.Scenario: Verify apartments is displayed on search page when we filter by apartment.executor": "Run",
-    "Cucumber Java.Scenario: Verify country type is automatically selected by enter city.executor": "Run",
-    "Cucumber Java.Scenario: Verify international radio button is automatically selected by enter international city.executor": "Run",
-    "Cucumber Java.Scenario: Verify popular filters are working properly.executor": "Run",
-    "Cucumber Java.Scenario: Verify price of hotels are in high to low.executor": "Run",
-    "Cucumber Java.Scenario: Verify price of hotels are in low to high.executor": "Run",
-    "Cucumber Java.Scenario: Verify property type are displayed on search page when we filter by property type.executor": "Run",
-    "Cucumber Java.Scenario: Verify rating of hotels are in descending order.executor": "Run",
-    "Cucumber Java.Scenario: Verify that for one way trip from and to location should not be same (1).executor": "Run",
-    "Cucumber Java.Scenario: Verify that for one way trip from and to location should not be same (2).executor": "Run",
-    "Cucumber Java.Scenario: Verify that for one way trip from and to location should not be same.executor": "Run",
-    "Cucumber Java.Scenario: Verify villas are displayed on search page when we filter by villa.executor": "Run",
-    "Cucumber Java.Scenario: user can search flight.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "honeymoon__package",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/UST_java/MobileAutomation",
-    "onboarding.tips.debug.path": "C:/UST_java/GoibiboCucumberAutomationProject/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cucumber Java.Feature: BookHoliday.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Book the first hotel.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Search hotel.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify India is automatically selected by enter Indian city.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify apartments are displayed on search page when we filter by apartment.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify apartments is displayed on search page when we filter by apartment.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify country type is automatically selected by enter city.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify international radio button is automatically selected by enter international city.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify popular filters are working properly.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify price of hotels are in high to low.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify price of hotels are in low to high.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify property type are displayed on search page when we filter by property type.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify rating of hotels are in descending order.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify that for one way trip from and to location should not be same (1).executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify that for one way trip from and to location should not be same (2).executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify that for one way trip from and to location should not be same.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify villas are displayed on search page when we filter by villa.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: user can search flight.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;honeymoon__package&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/UST_java/MobileAutomation&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/UST_java/GoibiboCucumberAutomationProject/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\UST_java\GoibiboCucumberAutomationProject\src\test\java\com\automation" />

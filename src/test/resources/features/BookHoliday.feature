@@ -8,7 +8,7 @@ Feature: Validating Holiday Booking
     Then verify user is on holiday packages page
     When user selects for destination package
     Then verify package page is shown
-    When user selects from "Cochin" and date "22 October 2024"
+    When user selects from "Cochin" and date "30 October 2024"
     And user clicks the proceed to payment button
     Then verify user is on data filling page
     When user fills guest details

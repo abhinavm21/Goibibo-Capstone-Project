@@ -14,7 +14,7 @@ public class HolidaySteps {
 
     @Then("verify user is on holiday search page")
     public void verify_user_is_on_holiday_search_page() {
-        holidayPage.verifyHolidayPageIsDisplayed();
+        Assert.assertTrue(holidayPage.verifyHolidayPageIsDisplayed());
     }
 
     @When("user select handcrafted honeymoon holiday type")
@@ -56,13 +56,12 @@ public class HolidaySteps {
 
     @When("user fills guest details")
     public void user_fills_guest_details() {
-
+        holidayPage.fillingUsersData();
     }
 
     @Then("verify user is on holidays payment page")
     public void verify_user_is_on_holidays_payment_page() {
-
-
+        Assert.assertTrue(holidayPage.verifyPaymentPageIsDisplayed());
     }
 
 }
