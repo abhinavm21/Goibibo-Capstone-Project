@@ -1,7 +1,6 @@
 package com.automation.steps;
 
 
-import com.automation.pages.BasePage;
 import com.automation.pages.BusPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -58,8 +57,13 @@ public class BusSteps {
       busPage.selectSeat();
     }
 
-    @And("user clicks on continue")
-    public void userClicksOnContinue() {
+    @Then("verify continue button is displayed")
+    public void verifyContinueButtonIsDisplayed() {
+          Assert.assertTrue(busPage.continueBtnIsDisplayed());
+    }
+
+    @When("user select boarding point and dropping point and clicks on continue")
+    public void userSelectBoardingPointAndDroppingPointAndClicksOnContinue() {
         busPage.clickOnContinue();
     }
 
@@ -135,6 +139,69 @@ public class BusSteps {
 
         Assert.assertTrue(busPage.ratingsInAscendingOder());
     }
+
+
+    @And("user clicks on Departure")
+    public void userClicksOnDeparture() {
+        busPage.clickOnDepartureAsc();
+    }
+
+    @Then("verify departure is in ascending order")
+    public void verifyDepartureIsInAscendingOrder() {
+
+        Assert.assertTrue(busPage.departureInAscendingOrder());
+    }
+
+    @When("again user clicks on Departure")
+    public void againUserClicksOnDeparture() {
+        busPage.clickOnDepartureDesc();
+    }
+
+    @Then("verify  Departure is in descending order")
+    public void verifyDepartureIsInDescendingOrder() {
+        Assert.assertTrue(busPage.departureInDescendingOrder());
+    }
+
+    @And("user clicks on Arrival")
+    public void userClicksOnArrival() {
+        busPage.clickOnArrivalAsc();
+    }
+
+    @Then("verify Arrival is in ascending order")
+    public void verifyArrivalIsInAscendingOrder() {
+        Assert.assertTrue(busPage.arrivalInAscendingOrder());
+    }
+
+    @When("again user clicks on Arrival")
+    public void againUserClicksOnArrival() {
+        busPage.clickOnArrivalDesc();
+    }
+
+    @Then("verify  Arrival is in descending order")
+    public void verifyArrivalIsInDescendingOrder() {
+        Assert.assertTrue(busPage.arrivalInDescendingOrder());
+    }
+
+    @And("user clicks on cheapest")
+    public void userClicksOnCheapest() {
+        busPage.clickOnCheapestAsc();
+    }
+
+    @Then("verify ticket price is in ascending order")
+    public void verifyTicketPriceIsInAscendingOrder() {
+        Assert.assertTrue(busPage.priceInAscendingOrder());
+    }
+
+    @When("again user clicks on cheapest")
+    public void againUserClicksOnCheapest() {
+        busPage.clickOnCheapestDesc();
+    }
+
+    @Then("verify  ticket price is in descending order")
+    public void verifyTicketPriceIsInDescendingOrder() {
+        Assert.assertTrue(busPage.priceInDescendingOrder());
+    }
+
 
 
 }
