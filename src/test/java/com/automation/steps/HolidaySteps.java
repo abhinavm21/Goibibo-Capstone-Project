@@ -29,14 +29,14 @@ public class HolidaySteps {
 
 
 
-    @When("user selects for destination package")
-    public void user_selects_for_destination_package() {
-        holidayPage.selectDestination();
+    @When("user selects for destination {string} package")
+    public void userSelectsForDestinationPackage(String dest) {
+        holidayPage.selectDestination(dest);
     }
 
-    @Then("verify package page is shown")
-    public void verify_package_page_is_shown() {
-        Assert.assertTrue(holidayPage.verifyPackagePageIsDisplayed());
+    @Then("verify {string} package page is shown")
+    public void verifyPackagePageIsShown(String dest) {
+        Assert.assertTrue(holidayPage.verifyPackagePageIsDisplayed(dest));
     }
 
     @When("user selects from {string} and date {string}")
@@ -54,11 +54,11 @@ public class HolidaySteps {
         Assert.assertTrue(holidayPage.verifyDataFillingPageIsDisplayed());
     }
 
-    @When("user fills guest details")
-    public void user_fills_guest_details() {
-        holidayPage.fillingUsersData();
-    }
 
+    @When("user fills guest details using locality {string}")
+    public void userFillsGuestDetailsUsingLocality(String local) {
+        holidayPage.fillingUsersData(local);
+    }
     @Then("verify user is on holidays payment page")
     public void verify_user_is_on_holidays_payment_page() {
         Assert.assertTrue(holidayPage.verifyPaymentPageIsDisplayed());

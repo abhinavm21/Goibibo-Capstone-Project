@@ -2,10 +2,7 @@ package com.automation.pages;
 
 import com.automation.utils.ConfigReader;
 import com.automation.utils.DriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -18,12 +15,18 @@ public class BasePage {
 
     WebDriver driver;
     WebDriverWait wait;
+    JavascriptExecutor js ;
 
     public BasePage(){
         this.driver = DriverManager.getDriver();
         PageFactory.initElements(driver, this);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        js = (JavascriptExecutor) driver;
 
+    }
+
+    public void jsClick(WebElement ele){
+        js.executeScript("arguments[0].click();",ele);
     }
 
     public void waitForElementToBeVisible(WebElement element) {
