@@ -4,7 +4,6 @@ import com.automation.pages.FlightPage;
 import com.automation.pages.FlightSearchPage;
 import com.automation.pages.HomePage;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -50,5 +49,27 @@ public class FlightSteps {
     @And("verify user can see flights on flight search page")
     public void verifyUserCanSeeFlightsOnFlightSearchPage() {
         Assert.assertTrue(flightPage.viewFareIsDisplayed());
+    }
+
+    @When("user clicks on round-trip")
+    public void userClicksOnRoundTrip() {
+          flightPage.clickOnRoundTrip();
+    }
+
+    @Then("verify return date is displayed")
+    public void verifyReturnDateIsDisplayed() {
+
+        Assert.assertTrue(flightPage.returnDateIsDisplayed());
+    }
+
+    @When("user clicks on multi-city")
+    public void userClicksOnMultiCity() {
+
+        flightPage.clickOnMultiCity();
+    }
+
+    @Then("verify add another flight button is displayed")
+    public void verifyAddAnotherFlightButtonIsDisplayed() {
+        Assert.assertTrue(flightPage.addAnotherFlightButtonIsDisplayed());
     }
 }
