@@ -14,3 +14,14 @@ Feature: validating flight search feature
 	    When user enters same location for from "Chennai" and to field "Chennai" for flight
 		And user clicks on search button
 	    Then error message should be displayed for same location
+
+	Scenario: verify round trip is selected
+		Given user open goibibo website
+		When  user clicks on round-trip
+		Then verify return date is displayed
+
+
+	Scenario: verify multi-city is selected
+		Given user open goibibo website
+		When  user clicks on multi-city
+		Then verify add another flight button is displayed

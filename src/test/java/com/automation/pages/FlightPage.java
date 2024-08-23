@@ -77,4 +77,28 @@ public class FlightPage extends BasePage {
     public boolean viewFareIsDisplayed() {
         return viewFareButton.isDisplayed();
     }
+
+    @FindBy(xpath = "//p[text()='Round-trip']")
+    WebElement roundTrip;
+    public void clickOnRoundTrip() {
+        roundTrip.click();
+    }
+
+    @FindBy(xpath = "//span[text()='Return']/../p[@class='sc-12foipm-4 czGBLf fswWidgetTitle']")
+    WebElement returnDate;
+    public boolean returnDateIsDisplayed() {
+        return returnDate.isDisplayed();
+    }
+
+    @FindBy(xpath = "//p[text()='Multi-city']")
+    WebElement multiCity;
+    public void clickOnMultiCity() {
+        multiCity.click();
+    }
+
+    @FindBy(xpath = "//a[text()='Add Another Flight']")
+    WebElement anotherFlight;
+    public boolean addAnotherFlightButtonIsDisplayed() {
+        return anotherFlight.isDisplayed();
+    }
 }
