@@ -112,20 +112,48 @@ public class BusPage extends BasePage {
     @FindBy(xpath = "(//*[contains(@class,'jenkXX')])[1] ")
     WebElement otherSeats;
 
+    @FindBy(css = ".BusSleeperIcon-sc-ha5qpg-0.cdzSbl")
+    WebElement outerStateSleeper;
+
     public void selectSeat() {
-        if (ladiesSeat.isDisplayed()) {
+        try {
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+            ladiesSeat.isDisplayed();
             ladiesSeat.click();
-        } else {
-            otherSeats.click();
+        } catch(Exception e){
+            try {
+                otherSeats.click();
+            }catch (Exception h){
+                outerStateSleeper.click();
+            }
         }
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     @FindBy(xpath = "//button[text()='CONTINUE']")
     WebElement continueBtn;
 
-    public void clickOnContinue() {
+    public boolean continueBtnIsDisplayed() {
+        return continueBtn.isDisplayed();
+    }
 
-        continueBtn.click();
+    @FindBy(xpath = "//div/section[1]/div/div[2]/div[1]/div/label[1]")
+    WebElement boardingPoint;
+
+    @FindBy(xpath = "//div/section[1]/div/div[2]/div[2]/div/label[1]")
+    WebElement droppingPoint;
+
+    public void clickOnContinue() {
+        try {
+            outerStateSleeper.isDisplayed();
+            boardingPoint.click();
+            droppingPoint.click();
+            waitForElementToBeVisible(continueBtn);
+            continueBtn.click();
+        } catch (Exception e) {
+            waitForElementToBeVisible(continueBtn);
+            continueBtn.click();
+        }
     }
 
     @FindBy(xpath = "//header[text()='Review your Booking']")
@@ -142,10 +170,10 @@ public class BusPage extends BasePage {
     @FindBy(xpath = "//input[@placeholder='Age']")
     WebElement age;
 
-    @FindBy(css = ".genderTabsList.selected']")
+    @FindBy(xpath = "//li[contains(@class,'genderTab')]//span[text()='Female']")
     WebElement femaleGender;
 
-    @FindBy(className = "genderTabsList")
+    @FindBy(xpath = "//li[contains(@class,'genderTab')]//span[text()='Male']")
     WebElement maleGender;
 
     @FindBy(xpath = "//input[@placeholder='Enter Email Address']")
@@ -171,11 +199,12 @@ public class BusPage extends BasePage {
         fName.sendKeys(ConfigReader.getConfigValue("fname"));
         age.sendKeys(ConfigReader.getConfigValue("age"));
 
-        if (!maleGender.isDisplayed()) {
-            femaleGender.click();
-        } else {
-            maleGender.click();
-        }
+
+            if (ConfigReader.getConfigValue("gender").equals("female")) {
+                femaleGender.click();
+            } else {
+                maleGender.click();
+            }
 
         email.sendKeys(ConfigReader.getConfigValue("email"));
         mobNo.sendKeys(ConfigReader.getConfigValue("phoneNumber"));
@@ -192,9 +221,18 @@ public class BusPage extends BasePage {
     @FindBy(xpath = "//button[contains(text(),'Pay')]")
     WebElement payButton;
 
+    @FindBy(xpath = "(//span[@class='checkmark'])[1]")
+    WebElement secureTrip;
+
     public void clickOnPayButton() {
-        waitForElementToBeVisible(payButton);
-        payButton.click();
+        try {
+            secureTrip.isDisplayed();
+            secureTrip.click();
+            payButton.click();
+        }catch (Exception e){
+            payButton.click();
+        }
+
     }
 
     @FindBy(xpath = "//span[text()='UPI Options']")
@@ -294,6 +332,171 @@ public class BusPage extends BasePage {
 
         Collections.sort(copy_li);
         System.out.println("Sorted list (low to high) \n" + copy_li);
+
+        return li.equals(copy_li);
+    }
+
+    @FindBy(xpath = "//span[@data-val='late_departure']")
+    WebElement departureAsc;
+    public void clickOnDepartureAsc() {
+        departureAsc.click();
+    }
+
+    @FindBy(xpath = "//div[@class='SrpActiveCardstyles__DepartureWrapperDiv-sc-yk1110-21 cOOMQi']/p[@class='SrpActiveCardstyles__BusBoldtxtPara-sc-yk1110-7 faoGPx']")
+    List<WebElement> departureList;
+
+    public boolean departureInAscendingOrder() {
+        List<Integer> li = new ArrayList<>();
+
+        for (WebElement dep : departureList) {
+            String[] string = dep.getText().split(":");
+            li.add(Integer.parseInt(string[0]));
+        }
+        System.out.println("Original list (low to high) \n" + li);
+
+        List<Integer> copy_li = new ArrayList<>(li);
+        System.out.println("Copy of original list(low to high) \n " + copy_li);
+
+        Collections.sort(copy_li);
+        System.out.println("Sorted list (low to high) \n" + copy_li);
+
+        return li.equals(copy_li);
+    }
+
+    @FindBy(xpath = "//span[@data-val='early_departure']")
+    WebElement departureDesc;
+    public void clickOnDepartureDesc() {
+        departureDesc.click();
+    }
+
+    public boolean departureInDescendingOrder() {
+        List<Integer> li = new ArrayList<>();
+
+        for (WebElement dep : departureList) {
+            String[] string = dep.getText().split(":");
+            li.add(Integer.parseInt(string[0]));
+        }
+        System.out.println("Original list (high to low) \n" + li);
+
+        List<Integer> copy_li = new ArrayList<>(li);
+        System.out.println("Copy of original list(high to low) \n " + copy_li);
+
+        Collections.sort(copy_li);
+        System.out.println("Sorted list (low to high) \n" + copy_li);
+
+        Collections.reverse(copy_li);
+        System.out.println("reverse sorted list (high to low)\n" + copy_li);
+
+        return li.equals(copy_li);
+    }
+
+    @FindBy(xpath = "//span[@data-val='late_arrival']")
+    WebElement arrivalAsc;
+
+    public void clickOnArrivalAsc() {
+        arrivalAsc.click();
+    }
+
+    @FindBy(xpath = "//div[contains(@class,'ArrivalWrapper')]/p[@class='SrpActiveCardstyles__BusBoldtxtPara-sc-yk1110-7 faoGPx']")
+    List<WebElement> arrivalList;
+
+    public boolean arrivalInAscendingOrder() {
+        List<Integer> li = new ArrayList<>();
+
+        for (WebElement dep : arrivalList) {
+            String[] string = dep.getText().split(":");
+            li.add(Integer.parseInt(string[0]));
+        }
+        System.out.println("Original list (low to high) \n" + li);
+
+        List<Integer> copy_li = new ArrayList<>(li);
+        System.out.println("Copy of original list(low to high) \n " + copy_li);
+
+        Collections.sort(copy_li);
+        System.out.println("Sorted list (low to high) \n" + copy_li);
+
+        return li.equals(copy_li);
+    }
+
+    @FindBy(xpath = "//span[@data-val='early_arrival']")
+    WebElement arrivalDesc;
+
+    public void clickOnArrivalDesc() {
+        arrivalDesc.click();
+    }
+
+    public boolean arrivalInDescendingOrder() {
+        List<Integer> li = new ArrayList<>();
+
+        for (WebElement dep : arrivalList) {
+            String[] string = dep.getText().split(":");
+            li.add(Integer.parseInt(string[0]));
+        }
+        System.out.println("Original list (high to low) \n" + li);
+
+        List<Integer> copy_li = new ArrayList<>(li);
+        System.out.println("Copy of original list(high to low) \n " + copy_li);
+
+        Collections.sort(copy_li);
+        System.out.println("Sorted list (low to high) \n" + copy_li);
+
+        Collections.reverse(copy_li);
+        System.out.println("reverse sorted list (high to low)\n" + copy_li);
+
+        return li.equals(copy_li);
+    }
+
+    @FindBy(xpath = "//span[@data-val='high_price']")
+    WebElement priceAsc;
+
+    public void clickOnCheapestAsc() {
+        priceAsc.click();
+    }
+
+    @FindBy(css = ".SrpActiveCardstyles__RupeetxtSpan-sc-yk1110-37.iIIlCN")
+    List<WebElement> priceList;
+
+
+    public boolean priceInAscendingOrder() {
+        List<Integer> li = new ArrayList<>();
+
+        for (WebElement dep : priceList) {
+            li.add(Integer.parseInt(dep.getText().trim()));
+        }
+        System.out.println("Original list (low to high) \n" + li);
+
+        List<Integer> copy_li = new ArrayList<>(li);
+        System.out.println("Copy of original list(low to high) \n " + copy_li);
+
+        Collections.sort(copy_li);
+        System.out.println("Sorted list (low to high) \n" + copy_li);
+
+        return li.equals(copy_li);
+    }
+
+    @FindBy(xpath = "//span[@data-val='low_price']")
+    WebElement priceDesc;
+
+    public void clickOnCheapestDesc() {
+        priceDesc.click();
+    }
+
+    public boolean priceInDescendingOrder() {
+        List<Integer> li = new ArrayList<>();
+
+        for (WebElement dep : priceList) {
+            li.add(Integer.parseInt(dep.getText().trim()));
+        }
+        System.out.println("Original list (high to low) \n" + li);
+
+        List<Integer> copy_li = new ArrayList<>(li);
+        System.out.println("Copy of original list(high to low) \n " + copy_li);
+
+        Collections.sort(copy_li);
+        System.out.println("Sorted list (low to high) \n" + copy_li);
+
+        Collections.reverse(copy_li);
+        System.out.println("reverse sorted list (high to low)\n" + copy_li);
 
         return li.equals(copy_li);
     }
