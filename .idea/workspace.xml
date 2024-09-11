@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a55a4a47-7160-427a-b5a5-81dfedd08c2e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/pages/BusPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/pages/BusPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/pages/HolidayPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/pages/HolidayPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/pages/HotelPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/pages/HotelPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/steps/BusSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/steps/BusSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/steps/FlightSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/steps/FlightSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/steps/HotelSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/steps/HotelSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/utils/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/utils/DriverManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/FlightBooking.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/FlightBooking.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/HotelBooking.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/HotelBooking.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +57,11 @@
     "Cucumber Java.Scenario: Verify arrival time is displayed in early(ascending) and late(descending) order.executor": "Run",
     "Cucumber Java.Scenario: Verify booking for Handcrafted Honeymoon.executor": "Run",
     "Cucumber Java.Scenario: Verify country type is automatically selected by enter city.executor": "Run",
+    "Cucumber Java.Scenario: Verify customer rating filters are working properly.executor": "Run",
+    "Cucumber Java.Scenario: Verify customer rating of hotels are in descending order.executor": "Run",
     "Cucumber Java.Scenario: Verify departure time is in descending and ascending order.executor": "Run",
     "Cucumber Java.Scenario: Verify international radio button is automatically selected by enter international city.executor": "Run",
+    "Cucumber Java.Scenario: Verify popular filters are working properly (1).executor": "Run",
     "Cucumber Java.Scenario: Verify popular filters are working properly.executor": "Run",
     "Cucumber Java.Scenario: Verify price filters are working properly.executor": "Run",
     "Cucumber Java.Scenario: Verify price of hotels are in high to low.executor": "Run",
@@ -54,18 +69,23 @@
     "Cucumber Java.Scenario: Verify price of ticket is displayed in low price(ascending) and high price(descending) order.executor": "Run",
     "Cucumber Java.Scenario: Verify property type are displayed on search page when we filter by property type.executor": "Run",
     "Cucumber Java.Scenario: Verify rating of hotels are in descending order.executor": "Run",
+    "Cucumber Java.Scenario: Verify star rating filters are working properly.executor": "Run",
     "Cucumber Java.Scenario: Verify that for one way trip from and to location should not be same (1).executor": "Run",
     "Cucumber Java.Scenario: Verify that for one way trip from and to location should not be same (2).executor": "Run",
     "Cucumber Java.Scenario: Verify that for one way trip from and to location should not be same.executor": "Run",
+    "Cucumber Java.Scenario: Verify the functionality of update search button.executor": "Run",
     "Cucumber Java.Scenario: Verify villas are displayed on search page when we filter by villa.executor": "Run",
     "Cucumber Java.Scenario: user can search flight.executor": "Run",
     "Cucumber Java.Scenario: verify multi-city is selected.executor": "Run",
     "Cucumber Java.Scenario: verify round trip is selected.executor": "Run",
+    "JUnit.TestRunner.executor": "Run",
+    "Maven.GoibiboCucumberAutomationProject [clean].executor": "Run",
+    "Maven.GoibiboCucumberAutomationProject [install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/UST_java/MobileAutomation",
+    "last_opened_file_path": "C:/UST_java/Goibibo-Capstone-Project",
     "onboarding.tips.debug.path": "C:/UST_java/GoibiboCucumberAutomationProject/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -84,16 +104,16 @@
       <recent name="com.automation.steps" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Verify country type is automatically selected by enter city">
-    <configuration name="Scenario: Verify country type is automatically selected by enter city" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestRunner">
+    <configuration name="Scenario: Verify customer rating filters are working properly" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BookHotel.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/HotelBooking.feature" />
       <option name="GLUE" value="com.automation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="GoibiboCucumberAutomationProject" />
-      <option name="NAME_FILTER" value="^Verify country type is automatically selected by enter city$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify country type is automatically selected by enter city$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verify country type is automatically selected by enter city" />
+      <option name="NAME_FILTER" value="^Verify customer rating filters are working properly$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify customer rating filters are working properly$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verify customer rating filters are working properly" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -107,7 +127,7 @@
     </configuration>
     <configuration name="Scenario: Verify popular filters are working properly" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BookHotel.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/HotelBooking.feature" />
       <option name="GLUE" value="com.automation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="GoibiboCucumberAutomationProject" />
@@ -127,7 +147,7 @@
     </configuration>
     <configuration name="Scenario: Verify price filters are working properly" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BusBooking.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/HotelBooking.feature" />
       <option name="GLUE" value="com.automation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="GoibiboCucumberAutomationProject" />
@@ -145,15 +165,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Verify rating is in descending and ascending order" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Verify star rating filters are working properly" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/FlightBooking.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/HotelBooking.feature" />
       <option name="GLUE" value="com.automation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="GoibiboCucumberAutomationProject" />
-      <option name="NAME_FILTER" value="^Verify rating is in descending and ascending order$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify rating is in descending and ascending order$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verify rating is in descending and ascending order" />
+      <option name="NAME_FILTER" value="^Verify star rating filters are working properly$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify star rating filters are working properly$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verify star rating filters are working properly" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -165,29 +185,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: verify round trip is selected" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/FlightBooking.feature" />
-      <option name="GLUE" value="com.automation.steps" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+    <configuration name="TestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GoibiboCucumberAutomationProject" />
-      <option name="NAME_FILTER" value="^verify round trip is selected$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^verify round trip is selected$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: verify round trip is selected" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="PATTERN" value="com.automation.runner.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.automation.runner" />
+      <option name="MAIN_CLASS_NAME" value="com.automation.runner.TestRunner" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: Verify country type is automatically selected by enter city" />
+        <item itemvalue="JUnit.TestRunner" />
+        <item itemvalue="Cucumber Java.Scenario: Verify star rating filters are working properly" />
+        <item itemvalue="Cucumber Java.Scenario: Verify customer rating filters are working properly" />
         <item itemvalue="Cucumber Java.Scenario: Verify price filters are working properly" />
         <item itemvalue="Cucumber Java.Scenario: Verify popular filters are working properly" />
       </list>

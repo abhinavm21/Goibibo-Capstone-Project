@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>CucumberAutomation</td>
+              <td>1</td>
+            <td>11 Sep 2024, 15:09</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.againUserClicksOnArrival()</td>
+              <td>1</td>
+              <td class="duration" data-value="222567400">222ms</td>
+              <td class="duration" data-value="222567400">222ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.againUserClicksOnCheapest()</td>
+              <td>1</td>
+              <td class="duration" data-value="209931400">209ms</td>
+              <td class="duration" data-value="209931400">209ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.againUserClicksOnDeparture()</td>
+              <td>1</td>
+              <td class="duration" data-value="215635200">215ms</td>
+              <td class="duration" data-value="215635200">215ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.againUserClicksOnRating()</td>
+              <td>1</td>
+              <td class="duration" data-value="212482800">212ms</td>
+              <td class="duration" data-value="212482800">212ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.userClicksOnArrival()</td>
+              <td>1</td>
+              <td class="duration" data-value="1819323200">1s 819ms</td>
+              <td class="duration" data-value="1819323200">1s 819ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.userClicksOnCheapest()</td>
+              <td>1</td>
+              <td class="duration" data-value="1754548600">1s 754ms</td>
+              <td class="duration" data-value="1754548600">1s 754ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.userClicksOnDeparture()</td>
+              <td>1</td>
+              <td class="duration" data-value="1663117200">1s 663ms</td>
+              <td class="duration" data-value="1663117200">1s 663ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.userClicksOnLocationChanger()</td>
+              <td>1</td>
+              <td class="duration" data-value="135704700">135ms</td>
+              <td class="duration" data-value="135704700">135ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.userClicksOnRating()</td>
+              <td>1</td>
+              <td class="duration" data-value="2057767000">2s 057ms</td>
+              <td class="duration" data-value="2057767000">2s 057ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.userClicksOnSearchButtonOfBus()</td>
+              <td>7</td>
+              <td class="duration" data-value="1782699800">1s 782ms</td>
+              <td class="duration" data-value="254671400">254ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.userClicksOnShowBusesButtonIfTheBusIsKSRTCOtherwiseSelectSeatDirectly()</td>
+              <td>1</td>
+              <td class="duration" data-value="5423125200">5s 423ms</td>
+              <td class="duration" data-value="5423125200">5s 423ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.userClicksOnThePayButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="193934400">193ms</td>
+              <td class="duration" data-value="193934400">193ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.userClicksOnUPIOptions()</td>
+              <td>1</td>
+              <td class="duration" data-value="153800100">153ms</td>
+              <td class="duration" data-value="153800100">153ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.userFillsTheDetails()</td>
+              <td>1</td>
+              <td class="duration" data-value="939482300">939ms</td>
+              <td class="duration" data-value="939482300">939ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.userSearchBusFromAndTo(java.lang.String,java.lang.String)</td>
+              <td>8</td>
+              <td class="duration" data-value="12926555600">12s 926ms</td>
+              <td class="duration" data-value="1615819450">1s 615ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.userSelectBoardingPointAndDroppingPointAndClicksOnContinue()</td>
+              <td>1</td>
+              <td class="duration" data-value="418760800">418ms</td>
+              <td class="duration" data-value="418760800">418ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.userSelectBusBooking()</td>
+              <td>8</td>
+              <td class="duration" data-value="32104200700">32s 104ms</td>
+              <td class="duration" data-value="4013025087">4s 013ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.userSelectDate(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="357288100">357ms</td>
+              <td class="duration" data-value="178644050">178ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.userSelectSeat()</td>
+              <td>1</td>
+              <td class="duration" data-value="10191531800">10s 191ms</td>
+              <td class="duration" data-value="10191531800">10s 191ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.verifyArrivalIsInAscendingOrder()</td>
+              <td>1</td>
+              <td class="duration" data-value="411801100">411ms</td>
+              <td class="duration" data-value="411801100">411ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.verifyArrivalIsInDescendingOrder()</td>
+              <td>1</td>
+              <td class="duration" data-value="382857200">382ms</td>
+              <td class="duration" data-value="382857200">382ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.verifyContinueButtonIsDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="25930500">025ms</td>
+              <td class="duration" data-value="25930500">025ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.verifyDepartureIsInAscendingOrder()</td>
+              <td>1</td>
+              <td class="duration" data-value="372616800">372ms</td>
+              <td class="duration" data-value="372616800">372ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.verifyDepartureIsInDescendingOrder()</td>
+              <td>1</td>
+              <td class="duration" data-value="367524700">367ms</td>
+              <td class="duration" data-value="367524700">367ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.verifyErrorMessageIsDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="24932900">024ms</td>
+              <td class="duration" data-value="24932900">024ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.verifyRatingIsInAscendingOrder()</td>
+              <td>1</td>
+              <td class="duration" data-value="360773000">360ms</td>
+              <td class="duration" data-value="360773000">360ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.verifyRatingIsInDescendingOrder()</td>
+              <td>1</td>
+              <td class="duration" data-value="416091600">416ms</td>
+              <td class="duration" data-value="416091600">416ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.verifySeatsAreVisible()</td>
+              <td>1</td>
+              <td class="duration" data-value="683426800">683ms</td>
+              <td class="duration" data-value="683426800">683ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.verifySendPaymentRequestAndQROptionIsDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="53855400">053ms</td>
+              <td class="duration" data-value="53855400">053ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.verifySourceAndDestinationIsInterchangedByTo(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="111701200">111ms</td>
+              <td class="duration" data-value="111701200">111ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.verifyTicketPriceIsInAscendingOrder()</td>
+              <td>1</td>
+              <td class="duration" data-value="381160500">381ms</td>
+              <td class="duration" data-value="381160500">381ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.verifyTicketPriceIsInDescendingOrder()</td>
+              <td>1</td>
+              <td class="duration" data-value="355617400">355ms</td>
+              <td class="duration" data-value="355617400">355ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.verifyUserIsOnBookingReviewPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="392962700">392ms</td>
+              <td class="duration" data-value="392962700">392ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.verifyUserIsOnBusSearchPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="1585879600">1s 585ms</td>
+              <td class="duration" data-value="1585879600">1s 585ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSteps.verifyUserIsOnThePaymentPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="8428825900">8s 428ms</td>
+              <td class="duration" data-value="8428825900">8s 428ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.FlightSteps.error_message_should_be_displayed_for_same_location()</td>
+              <td>1</td>
+              <td class="duration" data-value="25466700">025ms</td>
+              <td class="duration" data-value="25466700">025ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.FlightSteps.selectDepartureDate(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="451143700">451ms</td>
+              <td class="duration" data-value="451143700">451ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.FlightSteps.userClicksOnMultiCity()</td>
+              <td>1</td>
+              <td class="duration" data-value="104719300">104ms</td>
+              <td class="duration" data-value="104719300">104ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.FlightSteps.userClicksOnRoundTrip()</td>
+              <td>1</td>
+              <td class="duration" data-value="89983000">089ms</td>
+              <td class="duration" data-value="89983000">089ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.FlightSteps.userClicksOnSearchButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="1304372100">1s 304ms</td>
+              <td class="duration" data-value="652186050">652ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.FlightSteps.userEntersSameLocationForFromAndToFieldForFlight(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3884895500">3s 884ms</td>
+              <td class="duration" data-value="3884895500">3s 884ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.FlightSteps.userSearchFlightFromAndTo(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3872540000">3s 872ms</td>
+              <td class="duration" data-value="3872540000">3s 872ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.FlightSteps.verifyAddAnotherFlightButtonIsDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="25930300">025ms</td>
+              <td class="duration" data-value="25930300">025ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.FlightSteps.verifyReturnDateIsDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="23937500">023ms</td>
+              <td class="duration" data-value="23937500">023ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.FlightSteps.verifyUserCanSeeFlightsOnFlightSearchPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="60024416900">1m 024ms</td>
+              <td class="duration" data-value="60024416900">1m 024ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.FlightSteps.verifyUserIsOnFlightSearchPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="11809647900">11s 809ms</td>
+              <td class="duration" data-value="11809647900">11s 809ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HolidaySteps.select_holiday_booking()</td>
+              <td>2</td>
+              <td class="duration" data-value="219697200">219ms</td>
+              <td class="duration" data-value="109848600">109ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HolidaySteps.userClicksTheProceedToPaymentButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HolidaySteps.userFillsGuestDetailsUsingLocality(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HolidaySteps.userSelectsForDestinationPackage(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="43459770800">43s 459ms</td>
+              <td class="duration" data-value="21729885400">21s 729ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HolidaySteps.userSelectsFromToAndDate(java.lang.String,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="63394791000">1m 3s 394ms</td>
+              <td class="duration" data-value="31697395500">31s 697ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HolidaySteps.user_select_handcrafted_honeymoon_holiday_type()</td>
+              <td>2</td>
+              <td class="duration" data-value="16006512100">16s 006ms</td>
+              <td class="duration" data-value="8003256050">8s 003ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HolidaySteps.verifyPackagePageIsShown(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="502225100">502ms</td>
+              <td class="duration" data-value="251112550">251ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HolidaySteps.verifyUserIsOnDataFillingPage()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HolidaySteps.verify_user_is_on_holiday_packages_page()</td>
+              <td>2</td>
+              <td class="duration" data-value="7275182400">7s 275ms</td>
+              <td class="duration" data-value="3637591200">3s 637ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HolidaySteps.verify_user_is_on_holiday_search_page()</td>
+              <td>2</td>
+              <td class="duration" data-value="80281600">080ms</td>
+              <td class="duration" data-value="40140800">040ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HolidaySteps.verify_user_is_on_holidays_payment_page()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HomeSteps.user_open_goibibo_website()</td>
+              <td>38</td>
+              <td class="duration" data-value="221183501300">3m 41s 183ms</td>
+              <td class="duration" data-value="5820618455">5s 820ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.Hooks.cleanUp(io.cucumber.java.Scenario)</td>
+              <td>38</td>
+              <td class="duration" data-value="22271866900">22s 271ms</td>
+              <td class="duration" data-value="586101760">586ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.Hooks.setUp(io.cucumber.java.Scenario)</td>
+              <td>38</td>
+              <td class="duration" data-value="93717484000">1m 33s 717ms</td>
+              <td class="duration" data-value="2466249578">2s 466ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.checkoutDate(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="233836100">233ms</td>
+              <td class="duration" data-value="233836100">233ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.selectNumberOfRoomsAdultsChildAndChildAgeIs(java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="981870600">981ms</td>
+              <td class="duration" data-value="981870600">981ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.userClicksOn(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="22998110400">22s 998ms</td>
+              <td class="duration" data-value="5749527600">5s 749ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.userClicksOnCustomerRating()</td>
+              <td>1</td>
+              <td class="duration" data-value="166079100">166ms</td>
+              <td class="duration" data-value="166079100">166ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.userClicksOnPriceHighToLow()</td>
+              <td>1</td>
+              <td class="duration" data-value="137632900">137ms</td>
+              <td class="duration" data-value="137632900">137ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.userClicksOnPriceLowToHigh()</td>
+              <td>1</td>
+              <td class="duration" data-value="5184631600">5s 184ms</td>
+              <td class="duration" data-value="5184631600">5s 184ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.userClicksOnUpdateSearchButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="3985526100">3s 985ms</td>
+              <td class="duration" data-value="1992763050">1s 992ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.userEnterLocation(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="3480932100">3s 480ms</td>
+              <td class="duration" data-value="1740466050">1s 740ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.userEntersLocationOnUpdateSearch(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="3929460600">3s 929ms</td>
+              <td class="duration" data-value="1964730300">1s 964ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.userSelectCheckInDate(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="517866100">517ms</td>
+              <td class="duration" data-value="517866100">517ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.userSelectOne(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="69408826900">1m 9s 408ms</td>
+              <td class="duration" data-value="17352206725">17s 352ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.userSelectOneStarRating(java.lang.String,java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="19972078900">19s 972ms</td>
+              <td class="duration" data-value="6657359633">6s 657ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.user_clicks_on_first_hotel_displayed_on_the_hotel_search_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="2056772900">2s 056ms</td>
+              <td class="duration" data-value="2056772900">2s 056ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.user_clicks_on_proceed_to_payment()</td>
+              <td>1</td>
+              <td class="duration" data-value="107919500">107ms</td>
+              <td class="duration" data-value="107919500">107ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.user_clicks_on_search()</td>
+              <td>22</td>
+              <td class="duration" data-value="7221553000">7s 221ms</td>
+              <td class="duration" data-value="328252409">328ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.user_clicks_on_select_room_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="6314417600">6s 314ms</td>
+              <td class="duration" data-value="6314417600">6s 314ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.user_enters_location(java.lang.String)</td>
+              <td>22</td>
+              <td class="duration" data-value="39631646100">39s 631ms</td>
+              <td class="duration" data-value="1801438459">1s 801ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.user_fills_the_guest_details()</td>
+              <td>1</td>
+              <td class="duration" data-value="1027492600">1s 027ms</td>
+              <td class="duration" data-value="1027492600">1s 027ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.user_select_hotel_booking()</td>
+              <td>24</td>
+              <td class="duration" data-value="103455152500">1m 43s 455ms</td>
+              <td class="duration" data-value="4310631354">4s 310ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.verifyAreDisplayedInSearchPage(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="5227664600">5s 227ms</td>
+              <td class="duration" data-value="2613832300">2s 613ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.verifyIsSelectedWithRespectToTheCityWeEntered(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="329582800">329ms</td>
+              <td class="duration" data-value="164791400">164ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.verifyPriceFiltersAreDisplayedInSearchPage(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="120334684700">2m 334ms</td>
+              <td class="duration" data-value="30083671175">30s 083ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.verifyRespectedFiltersAreDisplayedInSearchPage(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="60114215200">1m 114ms</td>
+              <td class="duration" data-value="30057107600">30s 057ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.verifyTheHotelSearchPageIsUpdatedBy(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="179033900">179ms</td>
+              <td class="duration" data-value="89516950">089ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.verifyTheHotelsDisplayedInDescendingOrderByCustomerRating()</td>
+              <td>1</td>
+              <td class="duration" data-value="1753225600">1s 753ms</td>
+              <td class="duration" data-value="1753225600">1s 753ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.verifyTheHotelsDisplayedInPriceHighToLowOrder()</td>
+              <td>1</td>
+              <td class="duration" data-value="2632284800">2s 632ms</td>
+              <td class="duration" data-value="2632284800">2s 632ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.verifyTheHotelsDisplayedInPriceLowToHighOrder()</td>
+              <td>1</td>
+              <td class="duration" data-value="5179128300">5s 179ms</td>
+              <td class="duration" data-value="5179128300">5s 179ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.verifyTheHotelsWithRatingGraterThanIsDisplayedOnTheSearchPage(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="72542059900">1m 12s 542ms</td>
+              <td class="duration" data-value="18135514975">18s 135ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.verifyTheHotelsWithStarRatingGraterThanIsDisplayedOnTheSearchPage(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="10466179700">10s 466ms</td>
+              <td class="duration" data-value="3488726566">3s 488ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.verifyUserIsOnHotelsSearchPage()</td>
+              <td>20</td>
+              <td class="duration" data-value="123132252900">2m 3s 132ms</td>
+              <td class="duration" data-value="6156612645">6s 156ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.verify_user_is_on_hotels_displayed_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="2569763300">2s 569ms</td>
+              <td class="duration" data-value="2569763300">2s 569ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.verify_user_is_on_payment_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="4433113800">4s 433ms</td>
+              <td class="duration" data-value="4433113800">4s 433ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelSteps.verify_user_is_on_property_information_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="1116597300">1s 116ms</td>
+              <td class="duration" data-value="1116597300">1s 116ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>93</td>
+            <td>344</td>
+            <td class="duration">22m 17s 688ms</td>
+            <td class="duration">3s 888ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

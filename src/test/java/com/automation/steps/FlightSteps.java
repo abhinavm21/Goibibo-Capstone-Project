@@ -3,6 +3,7 @@ package com.automation.steps;
 import com.automation.pages.FlightPage;
 import com.automation.pages.FlightSearchPage;
 import com.automation.pages.HomePage;
+import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -27,13 +28,13 @@ public class FlightSteps {
 
     @When("user search flight from {string} and to {string}")
     public void userSearchFlightFromAndTo(String from, String to) throws InterruptedException {
-        flightPage.searchForFlight(from,to);
+        flightPage.searchForFlight(ConfigReader.getConfigValue(from),ConfigReader.getConfigValue(to));
 
     }
 
     @And("select departure date {string}")
     public void selectDepartureDate(String date) {
-        flightPage.selectDepartureDate(date);
+        flightPage.selectDepartureDate(ConfigReader.getConfigValue(date));
     }
 
     @And("user clicks on search button")

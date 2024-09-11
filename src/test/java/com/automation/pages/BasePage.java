@@ -1,9 +1,10 @@
 package com.automation.pages;
 
-import com.automation.utils.ConfigReader;
 import com.automation.utils.DriverManager;
-import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -71,6 +72,14 @@ public class BasePage {
             return false;
         } finally {
             setImplicitWait(30);
+        }
+    }
+
+    public boolean isDisplayed(WebElement element){
+        try {
+            return element.isDisplayed();
+        } catch (Exception e) {
+            return false;
         }
     }
 

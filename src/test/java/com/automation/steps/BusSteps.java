@@ -93,10 +93,6 @@ public class BusSteps {
         busPage.clickOnUPIOptions();
     }
 
-    @Then("verify send payment request is displayed")
-    public void verifySendPaymentRequestIsDisplayed() {
-
-    }
 
     @Then("verify send payment request and QR option  is displayed")
     public void verifySendPaymentRequestAndQROptionIsDisplayed() {

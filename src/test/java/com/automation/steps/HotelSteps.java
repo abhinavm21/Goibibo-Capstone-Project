@@ -1,10 +1,10 @@
 package com.automation.steps;
 
 import com.automation.pages.HotelPage;
+import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.java.en_scouse.An;
 import org.junit.Assert;
 
 public class HotelSteps {
@@ -19,19 +19,19 @@ public class HotelSteps {
 
     @When("user enters location {string}")
     public void user_enters_location(String loc) throws InterruptedException {
-        hotelPage.enterLocation(loc);
+        hotelPage.enterLocation(ConfigReader.getConfigValue(loc));
 
     }
 
     @And("user select checkIn date {string}")
     public void userSelectCheckInDate(String checkInDate) {
 
-        hotelPage.selectCheckInDate(checkInDate);
+        hotelPage.selectCheckInDate(ConfigReader.getConfigValue(checkInDate));
     }
 
     @And("checkOut date {string}")
     public void checkoutDate(String checkOutDate) {
-        hotelPage.selectCheckOutDate(checkOutDate);
+        hotelPage.selectCheckOutDate(ConfigReader.getConfigValue(checkOutDate));
 
     }
 
@@ -170,8 +170,12 @@ public class HotelSteps {
 
     @And("user select one star rating {string}")
     public void userSelectOneStarRating(String star) {
-        hotelPage.selectStarRating(star);
 
+
+    }
+    @And("user select one star rating {string},{string}")
+    public void userSelectOneStarRating(String star, String noOfStar) {
+        hotelPage.selectStarRating(star,noOfStar);
     }
 
     @Then("verify the hotels with star rating grater than {string} is displayed on the search page")
