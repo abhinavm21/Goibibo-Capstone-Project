@@ -199,7 +199,7 @@ public class HolidayPage extends BasePage {
     WebElement travellersText;
 
     public boolean verifyDataFillingPageIsDisplayed() {
-        return travellersText.isDisplayed();
+        return isDisplayed(travellersText);
     }
 
     @FindBy(xpath = "//div/p[text()='Add Traveller']")

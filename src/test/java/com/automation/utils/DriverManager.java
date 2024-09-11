@@ -2,8 +2,6 @@ package com.automation.utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chromium.ChromiumDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 
 import java.time.Duration;
 
@@ -15,6 +13,9 @@ public class DriverManager {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+    }
+    public static void setImplicitWait(int sec){
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(sec));
     }
 
     public static WebDriver getDriver() {

@@ -2,8 +2,8 @@ Feature: validating flight search feature
 
 	Scenario: user can search flight
 		Given user open goibibo website
-		When user search flight from "Chennai" and to "Bengaluru"
-	    And select departure date "12 December 2024"
+		When user search flight from "flight.from.city" and to "flight.to.city"
+	    And select departure date "flight.departure.time"
 		And user clicks on search button
 		Then verify user is on flight search page
 		And verify user can see flights on flight search page

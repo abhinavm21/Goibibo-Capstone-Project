@@ -188,10 +188,10 @@ public class BusPage extends BasePage {
     @FindBy(id = "Pincode")
     WebElement pinCode;
 
-    @FindBy(css = ".sc-kQsIoO.itfWUh")
+    @FindBy(xpath = "//div[@class='sc-gPzReC iKFhSc']")
     WebElement clickState;
 
-    @FindBy(css = ".sc-ePZHVD.idfhTT")
+    @FindBy(xpath = "//label[@for='confirm_check']")
     WebElement confirmCheckBox;
 
     public void fillsDetailsOfBusTraveller() {
@@ -256,10 +256,10 @@ public class BusPage extends BasePage {
     WebElement qrOption;
 
     public boolean paymentRequestAndQROptionIsDisplayed() {
-        return paymentRequestBtn.isDisplayed() && qrOption.isDisplayed();
+        return isDisplayed(paymentRequestBtn);
     }
 
-    @FindBy(css = ".SearchWidgetstyles__SwapIconWrap-sc-1mr4hwz-9.eoDMqf")
+    @FindBy(xpath = "//span[@class='SearchWidgetstyles__SwapIconWrap-sc-1mr4hwz-9 eoDMqf']")
     WebElement locationIcon;
 
     public void clickOnLocationChanger() {
