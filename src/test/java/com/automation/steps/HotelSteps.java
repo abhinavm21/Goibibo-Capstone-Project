@@ -4,7 +4,6 @@ import com.automation.pages.HotelPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.java.en_scouse.An;
 import org.junit.Assert;
 
 public class HotelSteps {
